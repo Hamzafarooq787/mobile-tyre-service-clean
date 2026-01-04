@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import ServiceDetailPage from "@/components/ServiceDetailPage";
 import { siteConfig } from "@/config/site";
 
