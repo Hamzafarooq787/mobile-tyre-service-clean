@@ -30,15 +30,7 @@ export default function Header() {
             <Link href="/contact" className="hover:text-[#7CFC00]">Contact</Link>
           </nav>
 
-          {/* Right: Call Button */}
-          <div className="flex justify-end">
-            <a
-              href={siteConfig.links.telLink}
-              className="bg-[#7CFC00] text-black px-5 py-2 rounded-full text-sm font-semibold"
-            >
-              Call Now
-            </a>
-          </div>
+         
         </div>
 
         {/* Mobile Layout */}
