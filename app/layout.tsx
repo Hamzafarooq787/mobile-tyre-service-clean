@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jost.variable} antialiased`}
+        className={`${jost.variable} font-sans antialiased`}
       >
         {children}
       </body>
