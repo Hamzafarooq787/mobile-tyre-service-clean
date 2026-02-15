@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { siteConfig } from "../config/site";
 
@@ -14,12 +15,15 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <h3 className="text-white text-lg font-bold">
-              Meli’s{" "}
-              <span style={{ color: siteConfig.brandColor }}>
-                Mobile Tyre Fitting
-              </span>
-            </h3>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/logo.png"
+                alt="Meli's Mobile Tyre"
+                width={160}
+                height={53}
+                className="h-10 w-auto"
+              />
+            </Link>
 
             <p className="mt-4 text-sm leading-relaxed">
               Professional mobile tyre fitting service providing fast,
@@ -123,9 +127,21 @@ export default function Footer() {
         <div className="mt-16 border-t border-white/10" />
 
         {/* Bottom bar */}
-        <div className="py-6 text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} Meli’s Mobile Tyre Fitting.
-          All rights reserved.
+        <div className="py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+          <div>
+            Design & Develop by{" "}
+            <a
+              href="https://linkedo.co.uk/"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="hover:text-[#7CFC00] transition-colors"
+            >
+              Linkedo
+            </a>
+          </div>
+          <div>
+            © 2026 Meli's Mobile Tyre Fitting. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>
