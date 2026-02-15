@@ -129,9 +129,6 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
           <div>
-            © 2026 Meli's Mobile Tyre Fitting. All rights reserved.
-          </div>
-          <div>
             Design & Develop by{" "}
             <a
               href="https://linkedo.co.uk/"
@@ -141,6 +138,9 @@ export default function Footer() {
             >
               Linkedo
             </a>
+          </div>
+          <div>
+            © 2026 Meli's Mobile Tyre Fitting. All rights reserved.
           </div>
         </div>
       </div>
