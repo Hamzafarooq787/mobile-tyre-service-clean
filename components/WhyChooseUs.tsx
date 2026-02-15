@@ -23,24 +23,23 @@ const points = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-[#0b0d10] py-24">
-      {/* ✅ Extra horizontal padding added here */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+    <section className="bg-[#0b0d10] py-12 sm:py-16 md:py-20 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
 
           {/* Left Content */}
           <div className="max-w-xl mx-auto lg:mx-0">
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
               Why Choose Our Mobile Tyre Service?
             </h2>
 
-            <p className="mt-6 text-gray-400">
+            <p className="mt-4 sm:mt-5 md:mt-6 text-sm sm:text-base text-gray-400">
               We focus on convenience, reliability, and safety by delivering
               professional tyre fitting services directly to your location.
             </p>
 
-            <div className="mt-10 space-y-6">
+            <div className="mt-6 sm:mt-8 md:mt-10 space-y-4 sm:space-y-5 md:space-y-6">
               {points.map((item, index) => (
                 <div key={index} className="flex gap-4 items-start">
                   <div
@@ -64,13 +63,13 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Right Image */}
-          <div className="relative max-w-xl mx-auto lg:mx-0">
-            <div className="overflow-hidden rounded-2xl">
+          <div className="relative max-w-xl mx-auto lg:mx-0 mt-8 lg:mt-0">
+            <div className="overflow-hidden rounded-xl sm:rounded-2xl">
               <img
                 src="/background/Why-choose-us.jpg"
                 alt="Mobile tyre technician"
                 className="
-                  w-full h-[420px] object-cover
+                  w-full h-[280px] sm:h-[340px] md:h-[380px] lg:h-[420px] object-cover
                   transition-transform duration-500
                   hover:scale-105
                 "
@@ -79,7 +78,7 @@ export default function WhyChooseUs() {
 
             {/* Soft glow */}
             <div
-              className="absolute -inset-6 rounded-3xl blur-3xl opacity-20 -z-10"
+              className="absolute -inset-4 sm:-inset-6 rounded-2xl sm:rounded-3xl blur-3xl opacity-20 -z-10"
               style={{ backgroundColor: siteConfig.brandColor }}
             />
           </div>

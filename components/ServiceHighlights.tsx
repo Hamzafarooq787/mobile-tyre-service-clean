@@ -5,9 +5,9 @@ import { siteConfig } from "@/config/site";
 
 export default function ServiceHighlights() {
   return (
-    <section className="bg-[#0b0d10] py-20">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
+    <section className="bg-[#0b0d10] py-12 sm:py-16 md:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 text-white">
 
           {/* Feature 1 */}
           <div className="group bg-[#12151b] rounded-2xl p-6 border border-white/5 transition hover:-translate-y-1 hover:border-[#7CFC00]">

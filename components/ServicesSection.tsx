@@ -44,31 +44,32 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="bg-[#0b0d10] py-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-[#0b0d10] py-12 sm:py-16 md:py-20 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white px-4">
             Our Mobile Tyre Services
           </h2>
-          <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-400 max-w-2xl mx-auto px-4">
             Professional mobile tyre fitting services delivered directly to your
             location, designed for speed, safety, and convenience.
           </p>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 px-2 sm:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
           {services.map((service, index) => (
             <div
               key={index}
               className="
                 group
+                w-full
                 max-w-[380px]
                 mx-auto
                 bg-[#12151b]
-                rounded-2xl
+                rounded-xl sm:rounded-2xl
                 overflow-hidden
                 border border-white/5
                 transition-all duration-300
@@ -81,7 +82,7 @@ export default function ServicesSection() {
               <div className="overflow-hidden">
                 <div
                   className="
-                    h-64 sm:h-72
+                    h-48 sm:h-56 md:h-64 lg:h-72
                     bg-cover bg-center
                     transition-transform duration-500
                     group-hover:scale-110
@@ -91,7 +92,7 @@ export default function ServicesSection() {
               </div>
 
               {/* Content */}
-              <div className="p-7">
+              <div className="p-5 sm:p-6 md:p-7">
                 <h3
                   className="
                     text-lg font-semibold text-white

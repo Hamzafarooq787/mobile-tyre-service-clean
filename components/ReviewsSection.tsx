@@ -31,30 +31,31 @@ const reviews = [
 
 export default function ReviewsSection() {
   return (
-    <section className="bg-[#0b0d10] py-24">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+    <section className="bg-[#0b0d10] py-12 sm:py-16 md:py-20 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white px-4">
             What Customers Say About Us
           </h2>
-          <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-400 max-w-2xl mx-auto px-4">
             Feedback from drivers who trust our mobile tyre fitting service for
             fast, on-site assistance.
           </p>
         </div>
 
         {/* Reviews Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8 lg:gap-10">
           {reviews.map((review, index) => (
             <div
               key={index}
               className="
                 bg-[#12151b]
                 border border-white/5
-                rounded-2xl
-                p-6
+                rounded-xl sm:rounded-2xl
+                p-5 sm:p-6
+                w-full
                 max-w-[380px]
                 mx-auto
                 transition-all duration-300
