@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "../config/site";
 
 export default function Header() {
@@ -15,12 +16,16 @@ export default function Header() {
     <div className="hidden md:grid grid-cols-3 items-center">
       
       {/* Left: Logo */}
-      <div className="text-xl font-bold tracking-tight">
-        Meli’s{" "}
-        <span style={{ color: siteConfig.brandColor }}>
-          Mobile Tyre
-        </span>
-      </div>
+      <Link href="/" className="flex items-center">
+        <Image
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Meli%E2%80%99s%20Mobile%20Tyre-iqnb9EICmjN59glQYLh3rVjUeu5uwL.png"
+          alt="Meli's Mobile Tyre"
+          width={180}
+          height={60}
+          className="h-12 w-auto"
+          priority
+        />
+      </Link>
 
       {/* Center: Navigation */}
       <nav className="flex justify-center gap-10 text-base font-medium">
@@ -37,12 +42,16 @@ export default function Header() {
     <div className="flex md:hidden items-center justify-between">
 
       {/* Logo */}
-      <div className="text-xl font-bold tracking-tight">
-        Meli’s{" "}
-        <span style={{ color: siteConfig.brandColor }}>
-          Mobile Tyre
-        </span>
-      </div>
+      <Link href="/" className="flex items-center">
+        <Image
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Meli%E2%80%99s%20Mobile%20Tyre-iqnb9EICmjN59glQYLh3rVjUeu5uwL.png"
+          alt="Meli's Mobile Tyre"
+          width={160}
+          height={53}
+          className="h-10 w-auto"
+          priority
+        />
+      </Link>
 
       {/* Mobile buttons */}
       <div className="flex items-center gap-4">

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { siteConfig } from "../config/site";
 
@@ -14,12 +15,15 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <h3 className="text-white text-lg font-bold">
-              Meli’s{" "}
-              <span style={{ color: siteConfig.brandColor }}>
-                Mobile Tyre Fitting
-              </span>
-            </h3>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Meli%E2%80%99s%20Mobile%20Tyre-iqnb9EICmjN59glQYLh3rVjUeu5uwL.png"
+                alt="Meli's Mobile Tyre"
+                width={160}
+                height={53}
+                className="h-10 w-auto"
+              />
+            </Link>
 
             <p className="mt-4 text-sm leading-relaxed">
               Professional mobile tyre fitting service providing fast,
