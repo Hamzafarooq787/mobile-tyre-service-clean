@@ -17,7 +17,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-block mb-4">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Meli%E2%80%99s%20Mobile%20Tyre-iqnb9EICmjN59glQYLh3rVjUeu5uwL.png"
+                src="/logo.png"
                 alt="Meli's Mobile Tyre"
                 width={160}
                 height={53}

@@ -18,7 +18,7 @@ export default function Header() {
       {/* Left: Logo */}
       <Link href="/" className="flex items-center">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Meli%E2%80%99s%20Mobile%20Tyre-iqnb9EICmjN59glQYLh3rVjUeu5uwL.png"
+          src="/logo.png"
           alt="Meli's Mobile Tyre"
           width={180}
           height={60}
@@ -44,7 +44,7 @@ export default function Header() {
       {/* Logo */}
       <Link href="/" className="flex items-center">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Meli%E2%80%99s%20Mobile%20Tyre-iqnb9EICmjN59glQYLh3rVjUeu5uwL.png"
+          src="/logo.png"
           alt="Meli's Mobile Tyre"
           width={160}
           height={53}
