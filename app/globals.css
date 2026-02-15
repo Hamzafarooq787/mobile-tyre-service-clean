@@ -30,7 +30,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #1a1a1a;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -45,5 +45,5 @@ body {
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #7CFC00 #f1f1f1;
+  scrollbar-color: #7CFC00 #1a1a1a;
 }
