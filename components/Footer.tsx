@@ -127,7 +127,7 @@ export default function Footer() {
         <div className="mt-16 border-t border-white/10" />
 
         {/* Bottom bar */}
-        <div className="py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+        <div className="py-6 flex flex-col md:flex-row justify-center md:justify-between items-center gap-4 text-sm text-gray-500 text-center md:text-left">
           <div>
             Design & Develop by{" "}
             <a
