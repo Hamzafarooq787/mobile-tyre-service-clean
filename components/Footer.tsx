@@ -116,7 +116,7 @@ export default function Footer() {
                   href="/contact"
                   className="hover:text-[#7CFC00]"
                 >
-                  Mobile service covering London and surrounding areas
+                  Mobile service covering Birmingham and surrounding areas
                 </Link>
               </li>
             </ul>
