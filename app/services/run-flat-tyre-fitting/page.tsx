@@ -9,7 +9,7 @@ export default function Page() {
     <Header/>
     <ServiceDetailPage
       eyebrow="Specialist Fitment"
-      title="Run-Flat Tyre Fitting in London"
+      title="Run-Flat Tyre Fitting in Birmingham"
       subtitle="Run-flat tyres need correct handling. We follow a careful process to ensure proper installation, safe pressures, and a dependable finish."
       heroImage="/services/service-5.jpg"
       highlights={[

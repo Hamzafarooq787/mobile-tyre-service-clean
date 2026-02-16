@@ -9,7 +9,7 @@ export default function Page() {
     <Header/>
     <ServiceDetailPage
       eyebrow="Mobile Tyre Near Me"
-      title="Tyre Replacement in London"
+      title="Tyre Replacement in Birmingham"
       subtitle="Worn, damaged, or unsafe tyres replaced at your location. We focus on correct fitment, smooth driving, and dependable safety checks."
       heroImage="/services/tyre-replacement.jpg"
       highlights={[

@@ -17,7 +17,7 @@ export default function ContactPage() {
           </h1>
           <p className="mt-6 text-black/80 max-w-2xl text-lg">
             Need urgent tyre assistance or want to schedule a visit?  
-            Our mobile technicians are available across London, day and night.
+            Our mobile technicians are available across Birmingham, day and night.
           </p>
         </div>
       </section>
@@ -114,12 +114,12 @@ export default function ContactPage() {
             </h3>
 
             <p className="mt-4 text-sm text-gray-400">
-              We operate as a fully mobile tyre fitting service, covering London and nearby
+              We operate as a fully mobile tyre fitting service, covering Birmingham and nearby
               surrounding areas. Wherever you are, we come directly to you.
             </p>
 
             <p className="mt-4 text-sm text-white">
-              Mobile service • No garage visits • All London postcodes
+              Mobile service • No garage visits • All Birmingham postcodes
             </p>
           </div>
 

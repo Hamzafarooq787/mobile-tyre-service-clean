@@ -9,11 +9,11 @@ export default function Page() {
     <Header/>
     <ServiceDetailPage
       eyebrow="Mobile Tyre Near Me"
-      title="Mobile Tyre Fitting in London"
+      title="Mobile Tyre Fitting in Birmingham"
       subtitle="On-site fitting at your home, workplace, or roadside location. We arrive with the right tools, fit safely, and confirm everything is ready before you set off."
       heroImage="/services/mobile-tyre-fitting.jpg"
       highlights={[
-        "Fitting at your location across London",
+        "Fitting at your location across Birmingham",
         "Proper torque and safety checks",
         "Suitable for cars, vans & light commercial",
         "Convenient booking and quick turnaround",

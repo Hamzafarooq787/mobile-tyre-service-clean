@@ -30,7 +30,7 @@ export default function AboutUsPage() {
             <p className="mt-6 text-lg text-black/80 max-w-2xl">
               A modern mobile tyre service built around speed, convenience, and
               professional workmanship — delivered directly to your location
-              anywhere in London.
+              anywhere in Birmingham.
             </p>
           </div>
         </section>
@@ -49,7 +49,7 @@ export default function AboutUsPage() {
               <p className="text-gray-400 leading-relaxed mb-4">
                 Whether you are parked at home, at work, or dealing with an
                 unexpected breakdown, our mobile technicians come fully equipped
-                to resolve your tyre issue on the spot.
+                to resolve your tyre issue on the spot anywhere in Birmingham.
               </p>
               <p className="text-gray-400 leading-relaxed">
                 Every service is handled with care, precision, and a clear focus
@@ -116,7 +116,7 @@ export default function AboutUsPage() {
                   Roadside Support
                 </h3>
                 <p className="text-gray-400">
-                  Comprehensive roadside tyre support covering London and nearby
+                  Comprehensive roadside tyre support covering Birmingham and nearby
                   areas, available day and night.
                 </p>
               </div>
@@ -192,7 +192,7 @@ export default function AboutUsPage() {
               Experience a Better Mobile Tyre Service
             </h2>
             <p className="mb-8">
-              Professional mobile tyre fitting across London. One call is all it
+              Professional mobile tyre fitting across Birmingham. One call is all it
               takes to get expert help at your location.
             </p>
 

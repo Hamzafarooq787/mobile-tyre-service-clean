@@ -9,13 +9,13 @@ export default function Page() {
     <Header/>
     <ServiceDetailPage
       eyebrow="Always Available"
-      title="24/7 Mobile Tyre Assistance in London"
+      title="24/7 Mobile Tyre Assistance in Birmingham"
       subtitle="Day or night, when tyre problems can’t wait. We keep the process straightforward, confirm details quickly, and aim for a smooth resolution."
       heroImage="/services/service-3.jpg"
       highlights={[
         "Support available day and night",
         "Simple contact and quick coordination",
-        "Coverage across London areas",
+        "Coverage across Birmingham areas",
         "Safety-first approach",
       ]}
       bullets={[

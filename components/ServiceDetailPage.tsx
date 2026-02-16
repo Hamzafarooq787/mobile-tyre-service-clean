@@ -23,7 +23,7 @@ type Props = {
 };
 
 export default function ServiceDetailPage({
-  eyebrow = "Service in London",
+  eyebrow = "Service in Birmingham",
   title,
   subtitle,
   heroImage,
@@ -162,7 +162,7 @@ export default function ServiceDetailPage({
                 </div>
 
                 <div className="mt-6 text-xs text-gray-500">
-                  Mobile service covering London and surrounding areas.
+                  Mobile service covering Birmingham and surrounding areas.
                 </div>
               </div>
             </aside>
