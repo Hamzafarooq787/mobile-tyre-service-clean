@@ -9,12 +9,12 @@ export default function Page() {
     <Header/>
     <ServiceDetailPage
       eyebrow="24/7 Support"
-      title="Emergency Tyre Call-Out in London"
+      title="Emergency Tyre Call-Out in Birmingham"
       subtitle="If it’s not safe to continue driving, we come to you. Quick coordination, professional service, and a focus on getting you mobile again."
       heroImage="/services/emergency-tyre.jpg"
       highlights={[
         "Fast response for urgent tyre issues",
-        "Support across London postcodes",
+        "Support across Birmingham postcodes",
         "Roadside-friendly process",
         "Clear ETA and next steps",
       ]}

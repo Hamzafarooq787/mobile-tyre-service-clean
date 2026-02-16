@@ -27,7 +27,7 @@ export default function Footer() {
 
             <p className="mt-4 text-sm leading-relaxed">
               Professional mobile tyre fitting service providing fast,
-              on-site assistance across London and nearby areas.
+              on-site assistance across Birmingham and nearby areas.
             </p>
           </div>
 

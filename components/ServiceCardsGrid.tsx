@@ -101,7 +101,7 @@ function ServiceCard({
 
 export default function ServiceCardsGrid({
   heading = "Our Complete Service Range",
-  subheading = "Mobile tyre solutions built around speed, safety, and convenience across London.",
+  subheading = "Mobile tyre solutions built around speed, safety, and convenience across Birmingham.",
   items,
   brandColor,
 }: Props) {

@@ -42,7 +42,7 @@ export default function ServicesPage() {
     },
     {
       title: "24/7 Mobile Assistance",
-      text: "Round-the-clock support for urgent tyre problems across London.",
+      text: "Round-the-clock support for urgent tyre problems across Birmingham.",
       image: "/services/service-3.jpg",
       href: "/services/24-7-mobile-assistance",
     },
@@ -71,7 +71,7 @@ export default function ServicesPage() {
 
           <div className="relative max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
             <h1 className="text-4xl md:text-6xl font-extrabold text-black max-w-3xl">
-              Mobile Tyre Services Across London
+              Mobile Tyre Services Across Birmingham
             </h1>
 
             <p className="mt-6 text-lg text-black/80 max-w-2xl">
@@ -90,7 +90,7 @@ export default function ServicesPage() {
               </h2>
               <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
                 Reliable mobile tyre solutions for cars, vans, and light commercial
-                vehicles across London.
+                vehicles across Birmingham.
               </p>
             </div>
 

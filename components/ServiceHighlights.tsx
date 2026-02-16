@@ -42,7 +42,7 @@ export default function ServiceHighlights() {
             </h3>
 
             <p className="text-sm text-gray-400 mt-2 leading-relaxed">
-              Mobile service available across London and nearby areas,
+              Mobile service available across Birmingham and nearby areas,
               covering homes, workplaces, and roadside locations.
             </p>
           </div>
