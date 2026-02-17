@@ -134,7 +134,7 @@ export default function Footer() {
               href="https://linkedo.co.uk/"
               target="_blank"
               rel="nofollow noopener noreferrer"
-              className="hover:text-[#7CFC00] transition-colors"
+              className="text-[#7CFC00] hover:text-[#6DD600] transition-colors duration-300"
             >
               Linkedo
             </a>
