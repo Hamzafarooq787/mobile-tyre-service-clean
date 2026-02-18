@@ -52,6 +52,7 @@ export default function Hero() {
       <div className="mt-8 sm:mt-10 md:mt-12 flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
         <a
           href={siteConfig.links.telLink}
+          onClick={() => (window as any).gtag_report_conversion?.(siteConfig.links.telLink)}
           className="px-8 py-4 rounded-full font-bold text-black text-center transition hover:opacity-90 hover:scale-105"
           style={{ backgroundColor: siteConfig.brandColor }}
         >
@@ -60,6 +61,7 @@ export default function Hero() {
 
         <a
           href={siteConfig.links.whatsappLink}
+          onClick={() => (window as any).gtag_report_conversion?.(siteConfig.links.whatsappLink)}
           className="px-8 py-4 rounded-full font-bold text-center border transition hover:bg-white/10 hover:scale-105"
           style={{
             borderColor: siteConfig.brandColor,

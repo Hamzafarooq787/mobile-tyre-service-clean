@@ -10,6 +10,7 @@ export default function FloatingContactIcons() {
       {/* WhatsApp */}
       <a
         href={siteConfig.links.whatsappLink}
+        onClick={() => (window as any).gtag_report_conversion?.(siteConfig.links.whatsappLink)}
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition hover:scale-110"
@@ -22,6 +23,7 @@ export default function FloatingContactIcons() {
       {/* Call */}
       <a
         href={siteConfig.links.telLink}
+        onClick={() => (window as any).gtag_report_conversion?.(siteConfig.links.telLink)}
         className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition hover:scale-110"
         style={{ backgroundColor: siteConfig.brandColor }}
         aria-label="Call Now"
