@@ -105,12 +105,15 @@ export default function Header() {
         <div className="mt-4 pt-4 border-t border-white/20">
           <a
             href={siteConfig.links.whatsappLink}
+            onClick={(e) => {
+              (window as any).gtag_report_conversion?.(siteConfig.links.whatsappLink);
+              setOpen(false);
+            }}
             className="block py-3 px-4 text-center rounded-full font-bold border transition-colors hover:bg-white/10 mb-3"
             style={{
               borderColor: siteConfig.brandColor,
               color: siteConfig.brandColor,
             }}
-            onClick={() => setOpen(false)}
           >
             WhatsApp Us
           </a>

@@ -47,6 +47,7 @@ export default function ContactPage() {
 
               <a
                 href="tel:07412840023"
+                onClick={() => (window as any).gtag_report_conversion?.('tel:07412840023')}
                 className="inline-flex items-center gap-2 mt-6 text-black bg-[#7CFC00] px-5 py-3 rounded-full text-sm font-semibold"
               >
                 07412 840023 <ArrowRight size={16} />
@@ -63,6 +64,7 @@ export default function ContactPage() {
 
               <a
                 href="https://wa.me/447365350710"
+                onClick={() => (window as any).gtag_report_conversion?.('https://wa.me/447365350710')}
                 target="_blank"
                 className="inline-flex items-center gap-2 mt-6 text-black bg-[#7CFC00] px-5 py-3 rounded-full text-sm font-semibold"
               >
@@ -138,6 +140,7 @@ export default function ContactPage() {
 
           <a
             href="tel:07412840023"
+            onClick={() => (window as any).gtag_report_conversion?.('tel:07412840023')}
             className="inline-flex items-center gap-2 mt-8 bg-black text-[#7CFC00] px-8 py-4 rounded-full font-semibold"
           >
             Call Now <ArrowRight size={18} />

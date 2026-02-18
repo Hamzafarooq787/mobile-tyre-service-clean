@@ -53,6 +53,19 @@ export default function RootLayout({
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'AW-17874951036');
+              
+              function gtag_report_conversion(url) {
+                var callback = function () {
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                  'send_to': 'AW-17874951036/conversion_label_here',
+                  'event_callback': callback
+                });
+                return false;
+              }
             `,
           }}
         />

@@ -27,6 +27,7 @@ export default function CtaSection() {
           {/* Call Button */}
           <a
             href={siteConfig.links.telLink}
+            onClick={() => (window as any).gtag_report_conversion?.(siteConfig.links.telLink)}
             className="
               flex items-center gap-3
               bg-black text-white
@@ -44,6 +45,7 @@ export default function CtaSection() {
           {/* WhatsApp Button */}
           <a
             href={siteConfig.links.whatsappLink}
+            onClick={() => (window as any).gtag_report_conversion?.(siteConfig.links.whatsappLink)}
             target="_blank"
             className="
               flex items-center gap-3

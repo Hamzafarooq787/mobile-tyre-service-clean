@@ -61,6 +61,7 @@ export default function ServiceDetailPage({
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href={phoneHref}
+                onClick={() => (window as any).gtag_report_conversion?.(phoneHref)}
                 className="inline-flex items-center gap-2 rounded-full px-5 py-3 font-semibold text-black"
                 style={{ backgroundColor: brandColor }}
               >
@@ -70,6 +71,7 @@ export default function ServiceDetailPage({
 
               <a
                 href={whatsappHref}
+                onClick={() => (window as any).gtag_report_conversion?.(whatsappHref)}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full px-5 py-3 font-semibold border border-white/15 hover:border-white/30 transition"
@@ -143,6 +145,7 @@ export default function ServiceDetailPage({
                 <div className="mt-6 flex flex-col gap-3">
                   <a
                     href={phoneHref}
+                    onClick={() => (window as any).gtag_report_conversion?.(phoneHref)}
                     className="w-full inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold text-black"
                     style={{ backgroundColor: brandColor }}
                   >
@@ -152,6 +155,7 @@ export default function ServiceDetailPage({
 
                   <a
                     href={whatsappHref}
+                    onClick={() => (window as any).gtag_report_conversion?.(whatsappHref)}
                     target="_blank"
                     rel="noreferrer"
                     className="w-full inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold border border-white/15 hover:border-white/30 transition"
