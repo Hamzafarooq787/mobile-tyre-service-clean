@@ -86,6 +86,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </head>
       <body
         className={`${jost.variable} font-sans antialiased`}
+        suppressHydrationWarning
       >
         <noscript>
           <iframe
