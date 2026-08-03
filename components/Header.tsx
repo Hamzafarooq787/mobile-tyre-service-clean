@@ -4,9 +4,11 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "../config/site";
+import { useSiteSettings } from "./SiteSettingsProvider";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const settings = useSiteSettings();
 
   return (
     <header className="w-full bg-black/90 backdrop-blur-md text-white fixed top-0 left-0 right-0 z-50 border-b border-white/10">
@@ -104,9 +106,9 @@ export default function Header() {
         {/* Mobile CTA in menu */}
         <div className="mt-4 pt-4 border-t border-white/20">
           <a
-            href={siteConfig.links.whatsappLink}
+            href={settings.whatsappLink}
             onClick={(e) => {
-              (window as any).gtag_report_conversion?.(siteConfig.links.whatsappLink);
+              (window as any).gtag_report_conversion?.(settings.whatsappLink);
               setOpen(false);
             }}
             className="block py-3 px-4 text-center rounded-full font-bold border transition-colors hover:bg-white/10 mb-3"
