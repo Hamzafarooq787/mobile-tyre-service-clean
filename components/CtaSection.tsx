@@ -2,8 +2,10 @@
 
 import { Phone, MessageCircle } from "lucide-react";
 import { siteConfig } from "../config/site";
+import { useSiteSettings } from "./SiteSettingsProvider";
 
 export default function CtaSection() {
+  const settings = useSiteSettings();
   return (
     <section
       className="py-24"
@@ -26,8 +28,8 @@ export default function CtaSection() {
 
           {/* Call Button */}
           <a
-            href={siteConfig.links.telLink}
-            onClick={() => (window as any).gtag_report_conversion?.(siteConfig.links.telLink)}
+            href={settings.telLink}
+            onClick={() => (window as any).gtag_report_conversion?.(settings.telLink)}
             className="
               flex items-center gap-3
               bg-black text-white
@@ -39,13 +41,13 @@ export default function CtaSection() {
             "
           >
             <Phone size={18} />
-            Call 07412 840023
+            Call {settings.phone}
           </a>
 
           {/* WhatsApp Button */}
           <a
-            href={siteConfig.links.whatsappLink}
-            onClick={() => (window as any).gtag_report_conversion?.(siteConfig.links.whatsappLink)}
+            href={settings.whatsappLink}
+            onClick={() => (window as any).gtag_report_conversion?.(settings.whatsappLink)}
             target="_blank"
             className="
               flex items-center gap-3

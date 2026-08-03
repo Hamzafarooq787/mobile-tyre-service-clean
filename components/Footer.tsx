@@ -3,9 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
-import { siteConfig } from "../config/site";
+import { useSiteSettings } from "./SiteSettingsProvider";
 
 export default function Footer() {
+  const settings = useSiteSettings();
   return (
     <footer className="bg-[#0b0d10] text-gray-400 pt-20">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
@@ -96,7 +97,7 @@ export default function Footer() {
                   href="/contact"
                   className="hover:text-[#7CFC00]"
                 >
-                  07412 840023
+                  {settings.phone}
                 </Link>
               </li>
 
@@ -106,7 +107,7 @@ export default function Footer() {
                   href="/contact"
                   className="hover:text-[#7CFC00]"
                 >
-                  Leq.1993@icloud.com
+                  {settings.email}
                 </Link>
               </li>
 
@@ -116,7 +117,7 @@ export default function Footer() {
                   href="/contact"
                   className="hover:text-[#7CFC00]"
                 >
-                  Mobile service covering Birmingham and surrounding areas
+                  {settings.address}
                 </Link>
               </li>
             </ul>

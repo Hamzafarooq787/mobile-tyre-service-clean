@@ -1,11 +1,12 @@
 "use client";
 
 import { Phone, MessageCircle, Mail, Clock, MapPin, ArrowRight } from "lucide-react";
-import { siteConfig } from "@/config/site";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { useSiteSettings } from "@/components/SiteSettingsProvider";
 
 export default function ContactPage() {
+  const settings = useSiteSettings();
   return (
     <>
     <Header/>
@@ -46,11 +47,11 @@ export default function ContactPage() {
               </p>
 
               <a
-                href="tel:07412840023"
-                onClick={() => (window as any).gtag_report_conversion?.('tel:07412840023')}
+                href={settings.telLink}
+                onClick={() => (window as any).gtag_report_conversion?.(settings.telLink)}
                 className="inline-flex items-center gap-2 mt-6 text-black bg-[#7CFC00] px-5 py-3 rounded-full text-sm font-semibold"
               >
-                07412 840023 <ArrowRight size={16} />
+                {settings.phone} <ArrowRight size={16} />
               </a>
             </div>
 
@@ -63,8 +64,8 @@ export default function ContactPage() {
               </p>
 
               <a
-                href="https://wa.me/447365350710"
-                onClick={() => (window as any).gtag_report_conversion?.('https://wa.me/447365350710')}
+                href={settings.whatsappLink}
+                onClick={() => (window as any).gtag_report_conversion?.(settings.whatsappLink)}
                 target="_blank"
                 className="inline-flex items-center gap-2 mt-6 text-black bg-[#7CFC00] px-5 py-3 rounded-full text-sm font-semibold"
               >
@@ -81,10 +82,10 @@ export default function ContactPage() {
               </p>
 
               <a
-                href="mailto:Leq.1993@icloud.com"
+                href={`mailto:${settings.email}`}
                 className="inline-flex items-center gap-2 mt-6 text-[#7CFC00] text-sm font-medium"
               >
-                Leq.1993@icloud.com <ArrowRight size={16} />
+                {settings.email} <ArrowRight size={16} />
               </a>
             </div>
 
@@ -139,8 +140,8 @@ export default function ContactPage() {
           </p>
 
           <a
-            href="tel:07412840023"
-            onClick={() => (window as any).gtag_report_conversion?.('tel:07412840023')}
+            href={settings.telLink}
+            onClick={() => (window as any).gtag_report_conversion?.(settings.telLink)}
             className="inline-flex items-center gap-2 mt-8 bg-black text-[#7CFC00] px-8 py-4 rounded-full font-semibold"
           >
             Call Now <ArrowRight size={18} />
