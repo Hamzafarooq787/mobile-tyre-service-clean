@@ -28,12 +28,16 @@ export async function updateSettings(formData: FormData) {
     redirect("/login");
   }
 
-  const phone = String(formData.get("phone") || "").trim();
-  const whatsapp = String(formData.get("whatsapp") || "").trim();
-  const email = String(formData.get("email") || "").trim();
-  const address = String(formData.get("address") || "").trim();
-  const gtmHeadScript = String(formData.get("gtmHeadScript") || "").trim();
-  const gtmBodyScript = String(formData.get("gtmBodyScript") || "").trim();
+  const phone = String(formData.get("phone") || "").trim().slice(0, 40);
+  const whatsapp = String(formData.get("whatsapp") || "").trim().slice(0, 40);
+  const email = String(formData.get("email") || "").trim().slice(0, 254);
+  const address = String(formData.get("address") || "").trim().slice(0, 300);
+  const gtmHeadScript = String(formData.get("gtmHeadScript") || "").trim().slice(0, 20000);
+  const gtmBodyScript = String(formData.get("gtmBodyScript") || "").trim().slice(0, 20000);
+
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    redirect("/settings?error=" + encodeURIComponent("Enter a valid email address."));
+  }
 
   const admin = createAdminClient();
   const { error } = await admin.from("site_settings").upsert(
