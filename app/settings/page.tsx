@@ -1,8 +1,13 @@
+import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { getSiteSettings } from "@/lib/settings";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
 import { updateSettings, logout } from "./actions";
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 export default async function SettingsPage({
   searchParams,
@@ -72,6 +77,7 @@ export default async function SettingsPage({
                   type="text"
                   defaultValue={settings.phone}
                   placeholder="07412 840023"
+                  maxLength={40}
                   className="w-full rounded-lg bg-black/40 border border-white/10 px-4 py-3 text-white text-sm focus:outline-none focus:border-[#7CFC00]"
                 />
               </div>
@@ -86,6 +92,7 @@ export default async function SettingsPage({
                   type="text"
                   defaultValue={settings.whatsappLink.replace("https://wa.me/", "")}
                   placeholder="447412840023"
+                  maxLength={40}
                   className="w-full rounded-lg bg-black/40 border border-white/10 px-4 py-3 text-white text-sm focus:outline-none focus:border-[#7CFC00]"
                 />
               </div>
@@ -99,6 +106,7 @@ export default async function SettingsPage({
                   name="email"
                   type="email"
                   defaultValue={settings.email}
+                  maxLength={254}
                   className="w-full rounded-lg bg-black/40 border border-white/10 px-4 py-3 text-white text-sm focus:outline-none focus:border-[#7CFC00]"
                 />
               </div>
@@ -112,6 +120,7 @@ export default async function SettingsPage({
                   name="address"
                   type="text"
                   defaultValue={settings.address}
+                  maxLength={300}
                   className="w-full rounded-lg bg-black/40 border border-white/10 px-4 py-3 text-white text-sm focus:outline-none focus:border-[#7CFC00]"
                 />
               </div>
@@ -137,6 +146,7 @@ export default async function SettingsPage({
                   rows={8}
                   defaultValue={settings.gtmHeadScript}
                   placeholder="<script>...</script>"
+                  maxLength={20000}
                   className="w-full rounded-lg bg-black/40 border border-white/10 px-4 py-3 text-white text-sm font-mono focus:outline-none focus:border-[#7CFC00]"
                 />
               </div>
@@ -151,6 +161,7 @@ export default async function SettingsPage({
                   rows={5}
                   defaultValue={settings.gtmBodyScript}
                   placeholder="<noscript>...</noscript>"
+                  maxLength={20000}
                   className="w-full rounded-lg bg-black/40 border border-white/10 px-4 py-3 text-white text-sm font-mono focus:outline-none focus:border-[#7CFC00]"
                 />
               </div>

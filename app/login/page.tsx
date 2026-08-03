@@ -1,5 +1,10 @@
+import type { Metadata } from "next";
 import { login } from "./actions";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 export default async function LoginPage({
   searchParams,
