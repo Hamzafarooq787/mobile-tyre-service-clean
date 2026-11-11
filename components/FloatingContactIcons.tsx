@@ -2,17 +2,15 @@
 
 import { Phone, Mail, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/config/site";
-import { useSiteSettings } from "./SiteSettingsProvider";
 
 export default function FloatingContactIcons() {
-  const settings = useSiteSettings();
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
 
       {/* WhatsApp */}
       <a
-        href={settings.whatsappLink}
-        onClick={() => (window as any).gtag_report_conversion?.(settings.whatsappLink)}
+        href={siteConfig.links.whatsappLink}
+        onClick={() => (window as any).gtag_report_conversion?.(siteConfig.links.whatsappLink)}
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition hover:scale-110"
@@ -24,8 +22,8 @@ export default function FloatingContactIcons() {
 
       {/* Call */}
       <a
-        href={settings.telLink}
-        onClick={() => (window as any).gtag_report_conversion?.(settings.telLink)}
+        href={siteConfig.links.telLink}
+        onClick={() => (window as any).gtag_report_conversion?.(siteConfig.links.telLink)}
         className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition hover:scale-110"
         style={{ backgroundColor: siteConfig.brandColor }}
         aria-label="Call Now"
@@ -35,7 +33,7 @@ export default function FloatingContactIcons() {
 
       {/* Email */}
       <a
-        href={`mailto:${settings.email}`}
+        href={`mailto:${siteConfig.links.email}`}
         className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition hover:scale-110 bg-[#12151b] border border-white/10"
         aria-label="Email"
       >

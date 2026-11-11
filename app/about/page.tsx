@@ -198,14 +198,14 @@ export default function AboutUsPage() {
 
             <div className="flex justify-center gap-4 flex-wrap">
               <a
-                href="tel:07412840023"
+                href={siteConfig.links.telLink}
                 className="bg-black text-white px-6 py-3 rounded-full font-semibold"
               >
-                Call 07412 840023
+                Call {siteConfig.phone}
               </a>
 
               <a
-                href="https://wa.me/447365350710"
+                href={siteConfig.links.whatsappLink}
                 className="border border-black px-6 py-3 rounded-full font-semibold"
               >
                 WhatsApp Us

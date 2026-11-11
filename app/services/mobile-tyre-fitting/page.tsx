@@ -35,8 +35,6 @@ export default function Page() {
       ctaTitle="Need tyres fitted today?"
       ctaText="Call or WhatsApp with your tyre size and location. We’ll confirm availability and get you booked in quickly."
       brandColor={siteConfig.brandColor}
-      phoneHref="tel:+447412840023"
-      whatsappHref="https://wa.me/447412840023"
     />
     <Footer/>
     </>

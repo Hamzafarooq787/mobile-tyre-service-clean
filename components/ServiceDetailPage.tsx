@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { siteConfig } from "@/config/site";
 import { ArrowRight, CheckCircle2, PhoneCall, MessageCircle } from "lucide-react";
 
 type Bullet = { title: string; text: string };
@@ -18,8 +19,6 @@ type Props = {
   ctaText: string;
 
   brandColor: string;
-  phoneHref: string;     // e.g. "tel:+447412840023"
-  whatsappHref: string;  // e.g. "https://wa.me/447412840023"
 };
 
 export default function ServiceDetailPage({
@@ -32,9 +31,8 @@ export default function ServiceDetailPage({
   ctaTitle,
   ctaText,
   brandColor,
-  phoneHref,
-  whatsappHref,
 }: Props) {
+  const { telLink, whatsappLink } = siteConfig.links;
   return (
     <main className="bg-black text-white">
       {/* Hero */}
@@ -60,8 +58,8 @@ export default function ServiceDetailPage({
             {/* CTAs */}
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href={phoneHref}
-                onClick={() => (window as any).gtag_report_conversion?.(phoneHref)}
+                href={telLink}
+                onClick={() => (window as any).gtag_report_conversion?.(telLink)}
                 className="inline-flex items-center gap-2 rounded-full px-5 py-3 font-semibold text-black"
                 style={{ backgroundColor: brandColor }}
               >
@@ -70,8 +68,8 @@ export default function ServiceDetailPage({
               </a>
 
               <a
-                href={whatsappHref}
-                onClick={() => (window as any).gtag_report_conversion?.(whatsappHref)}
+                href={whatsappLink}
+                onClick={() => (window as any).gtag_report_conversion?.(whatsappLink)}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full px-5 py-3 font-semibold border border-white/15 hover:border-white/30 transition"
@@ -144,8 +142,8 @@ export default function ServiceDetailPage({
 
                 <div className="mt-6 flex flex-col gap-3">
                   <a
-                    href={phoneHref}
-                    onClick={() => (window as any).gtag_report_conversion?.(phoneHref)}
+                    href={telLink}
+                    onClick={() => (window as any).gtag_report_conversion?.(telLink)}
                     className="w-full inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold text-black"
                     style={{ backgroundColor: brandColor }}
                   >
@@ -154,8 +152,8 @@ export default function ServiceDetailPage({
                   </a>
 
                   <a
-                    href={whatsappHref}
-                    onClick={() => (window as any).gtag_report_conversion?.(whatsappHref)}
+                    href={whatsappLink}
+                    onClick={() => (window as any).gtag_report_conversion?.(whatsappLink)}
                     target="_blank"
                     rel="noreferrer"
                     className="w-full inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold border border-white/15 hover:border-white/30 transition"

@@ -35,8 +35,6 @@ export default function Page() {
       ctaTitle="Need a replacement tyre?"
       ctaText="Share your tyre size and location. We’ll confirm options and arrange a time that works for you."
       brandColor={siteConfig.brandColor}
-      phoneHref="tel:+447412840023"
-      whatsappHref="https://wa.me/447412840023"
     />
     <Footer/>
     </>

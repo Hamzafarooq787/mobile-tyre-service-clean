@@ -35,8 +35,6 @@ export default function Page() {
       ctaTitle="Stuck right now?"
       ctaText="Call or WhatsApp your location. We’ll confirm the quickest option and support you immediately."
       brandColor={siteConfig.brandColor}
-      phoneHref="tel:+447412840023"
-      whatsappHref="https://wa.me/447412840023"
     />
     <Footer/>
     </>

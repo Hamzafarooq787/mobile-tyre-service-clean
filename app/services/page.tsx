@@ -192,7 +192,7 @@ export default function ServicesPage() {
               className="flex items-center gap-3 bg-black text-white px-8 py-4 rounded-full font-semibold"
             >
               <Phone size={18} />
-              Call 07412 840023
+              Call {siteConfig.phone}
             </a>
 
             <a

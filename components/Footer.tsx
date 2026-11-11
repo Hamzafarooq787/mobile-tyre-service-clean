@@ -1,12 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { siteConfig } from "@/config/site";
 import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
-import { useSiteSettings } from "./SiteSettingsProvider";
 
 export default function Footer() {
-  const settings = useSiteSettings();
   return (
     <footer className="bg-[#0b0d10] text-gray-400 pt-20">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
@@ -97,7 +96,7 @@ export default function Footer() {
                   href="/contact"
                   className="hover:text-[#7CFC00]"
                 >
-                  {settings.phone}
+                  {siteConfig.phone}
                 </Link>
               </li>
 
@@ -107,7 +106,7 @@ export default function Footer() {
                   href="/contact"
                   className="hover:text-[#7CFC00]"
                 >
-                  {settings.email}
+                  {siteConfig.links.email}
                 </Link>
               </li>
 
@@ -117,7 +116,7 @@ export default function Footer() {
                   href="/contact"
                   className="hover:text-[#7CFC00]"
                 >
-                  {settings.address}
+                  {siteConfig.address}
                 </Link>
               </li>
             </ul>

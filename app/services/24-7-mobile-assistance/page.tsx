@@ -35,8 +35,6 @@ export default function Page() {
       ctaTitle="Need help right now?"
       ctaText="Call or WhatsApp your location and tyre size. We’ll guide you and arrange support quickly."
       brandColor={siteConfig.brandColor}
-      phoneHref="tel:+447412840023"
-      whatsappHref="https://wa.me/447412840023"
     />
     <Footer/>
     </>
