@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Keep the Google Ads landing page separate from the existing website layout.
+  async rewrites() {
+    return [{ source: "/mobile-tyre-fitting", destination: "/ads/melis/index.html" }];
+  },
   images: {
     remotePatterns: [
       {
