@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#ffffff" />
-  <meta name="description" content="24/7 mobile tyre fitting in Birmingham. Meli's Mobile Tyre Fitting comes to your home, workplace or roadside for tyre replacement, emergency call-outs and same-day fitting." />
+  <meta name="description" content="Need mobile tyre fitting in Birmingham? Meli's Mobile Tyre Fitting provides 24/7 mobile tyre fitting, emergency tyre replacement, same-day tyre fitting and roadside tyre support at your home, workplace or roadside." />
   <meta name="robots" content="noindex, follow" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Mobile Tyre Fitting in Birmingham | Meli's Mobile Tyre Fitting" />
-  <meta property="og:description" content="Flat tyre? Our mobile technicians come to you. Call 24/7 or request a quote by WhatsApp." />
-  <title>Mobile Tyre Fitting Birmingham | 24/7 Call-Out | Meli's</title>
+  <meta property="og:description" content="Need mobile tyre fitting in Birmingham? We come to your home, workplace or roadside with 24/7 tyre fitting, emergency call-outs and same-day mobile tyre replacement." />
+  <title>Mobile Tyre Fitting Birmingham | 24/7 Mobile Tyre Replacement | Meli's</title>
   <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMxNjNhNTYiLz48Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIyMyIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjYiIGZpbGw9Im5vbmUiLz48Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSI5IiBmaWxsPSIjZmZmIi8+PGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iNCIgZmlsbD0iIzE2M2E1NiIvPjxwYXRoIGQ9Ik0zMiAxMHYxM00zMiA0MXYxM00xMCAzMmgxM20xOCAwaDEzTTE2IDE2bDkgOW0xNCAxNCA5IDlNNDggMTZsLTkgOU0yNSAzOWwtOSA5IiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGNpcmNsZSBjeD0iNTEiIGN5PSIxMyIgcj0iNyIgZmlsbD0iI2YyNzAzYiIvPjwvc3ZnPgo=" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -140,15 +140,37 @@ strong{font-weight:700}
 .section-heading>p:not(.section-kicker){color:#748595;margin-top:16px;line-height:1.75;font-size:15.5px}
 .section-services{background:#f9fbfc;border-top:1px solid #edf2f5}
 .services-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.service-card{background:white;padding:29px;border:1px solid #e8edf1;border-radius:16px;min-height:260px;display:flex;flex-direction:column;transition:transform .25s,border-color .25s,box-shadow .25s}
+.service-card{background:white;padding:18px;border:1px solid #e8edf1;border-radius:18px;min-height:100%;display:flex;flex-direction:column;transition:transform .25s,border-color .25s,box-shadow .25s;overflow:hidden}
 .service-card:hover{transform:translateY(-4px);border-color:#d4e0e8;box-shadow:0 14px 32px rgba(28,64,89,.07)}
-.service-icon{height:52px;width:52px;display:grid;place-items:center;border-radius:14px;margin-bottom:21px}
+.service-photo{display:block;width:100%;height:190px;object-fit:cover;border-radius:14px;border:1px solid #edf2f5;background:#f3f7fa;margin-bottom:18px}
+.service-header{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.service-icon{height:52px;width:52px;display:grid;place-items:center;border-radius:14px;flex:none}
 .service-icon svg{height:27px;width:27px;stroke-width:1.75}
 .blue-tint{background:#edf3fb;color:#2c6b9a}.orange-tint{background:#fff0e8;color:#dc6b35}.green-tint{background:#eaf8f1;color:#218962}.purple-tint{background:#f2eefb;color:#7661ae}.sky-tint{background:#eaf5f9;color:#397f9a}.yellow-tint{background:#fff8e4;color:#b48b20}
 .service-card h3{font-size:17.2px;font-weight:800;letter-spacing:-.035em}
-.service-card p{margin:10px 0 22px;font-size:13.5px;line-height:1.8;color:#6f8090;flex:1}
-.service-link{align-items:center;display:inline-flex;gap:7px;color:#2a678c;font-weight:800;font-size:12.5px;font-family:Manrope,sans-serif;align-self:flex-start}
+.service-card p{margin:0 0 16px;font-size:13.5px;line-height:1.8;color:#6f8090;flex:1}
+.service-mini-list{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:8px}
+.service-mini-list li{display:flex;align-items:flex-start;gap:8px;font-size:12.5px;color:#51677a;line-height:1.6}
+.service-mini-list svg{width:15px;height:15px;color:var(--green);margin-top:2px;stroke-width:2.5}
+.service-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:auto}
+.service-actions .btn{width:100%;min-height:44px;padding:11px 14px;font-size:12.5px}
+.service-link{align-items:center;display:inline-flex;gap:7px;color:#2a678c;font-weight:800;font-size:12.5px;font-family:Manrope,sans-serif;align-self:flex-start;margin-top:14px}
 .service-link svg{height:16px;width:16px;stroke-width:2.3;transition:transform .2s}.service-link:hover svg{transform:translateX(4px)}
+/* Gallery */
+.gallery-section{background:white}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.gallery-card{background:#fff;border:1px solid #e8edf1;border-radius:18px;overflow:hidden;box-shadow:0 8px 20px rgba(28,64,89,.04)}
+.gallery-card img{display:block;width:100%;height:215px;object-fit:cover;background:#f3f7fa}
+.gallery-card-content{padding:16px 18px 18px}
+.gallery-card h3{font-size:16px;color:var(--navy);margin-bottom:7px}
+.gallery-card p{font-size:13px;line-height:1.75;color:#708293}
+/* Floating actions */
+.floating-contact{position:fixed;right:18px;bottom:22px;z-index:80;display:flex;flex-direction:column;gap:10px}
+.float-btn{display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;box-shadow:0 16px 34px rgba(18,44,66,.18);color:#fff}
+.float-btn svg{width:24px;height:24px;stroke-width:2.3}
+.float-call{background:var(--orange)}
+.float-whatsapp{background:var(--green)}
+.float-btn:hover{transform:translateY(-3px)}
 /* Why section */
 .why-section{background:white}
 .why-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:clamp(42px,6vw,82px)}
@@ -270,6 +292,8 @@ strong{font-weight:700}
 }
 @media(max-width:850px){
   .nav-links{display:none}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .hero-grid{grid-template-columns:1fr;padding-top:63px;padding-bottom:70px;gap:37px}
   .hero h1{font-size:clamp(43px,7.2vw,62px)}
   .hero-content{max-width:680px}.hero-description{max-width:580px}
@@ -316,11 +340,14 @@ strong{font-weight:700}
   .benefit-grid{padding-block:22px;gap:17px 12px}
   .benefit-icon{width:37px;height:37px;border-radius:9px}
   .benefit-item strong{font-size:11px}.benefit-item small{font-size:10px}
-  .services-grid{gap:12px}
+  .services-grid,.gallery-grid{grid-template-columns:1fr;gap:12px}
   .service-card{padding:20px;min-height:255px;border-radius:13px}
+  .service-photo{height:200px}
+  .service-actions{grid-template-columns:1fr}
   .service-icon{width:45px;height:45px;margin-bottom:17px}
   .service-card h3{font-size:15.5px}.service-card p{font-size:12.8px}
   .service-link{font-size:12px}
+  .floating-contact{display:none}
   .illustration-wrap{min-height:auto;border-radius:17px}
   .illustration-label{right:6px;bottom:-16px}
   .why-content h2{font-size:30px}.why-content{padding-top:12px}
@@ -401,6 +428,7 @@ strong{font-weight:700}
       </a>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#services">Our services</a>
+        <a href="#gallery">Gallery</a>
         <a href="#why-us">Why choose us</a>
         <a href="#how-it-works">How it works</a>
         <a href="#faqs">FAQs</a>
@@ -416,8 +444,8 @@ strong{font-weight:700}
       <div class="container hero-grid">
         <div class="hero-content">
           <span class="eyebrow"><span class="eyebrow-dot"></span> BIRMINGHAM MOBILE TYRE SERVICE</span>
-          <h1 id="hero-title">Flat tyre?<br /><span>We come to you.</span></h1>
-          <p class="hero-description">24/7 mobile tyre fitting and emergency tyre replacement at your home, workplace or roadside. No garage visit needed — just tell us where you are.</p>
+          <h1 id="hero-title">Mobile tyre fitting<br /><span>in Birmingham, 24/7.</span></h1>
+          <p class="hero-description">24/7 mobile tyre fitting in Birmingham with emergency tyre replacement at your home, workplace or roadside. No garage visit needed — just tell us where you are and our mobile tyre fitting team will come to you.</p>
           <div class="hero-buttons">
             <a class="btn btn-orange btn-large js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call <span class="js-phone-text">07341 251404</span></a>
             <a class="btn btn-outline btn-large js-whatsapp" href="https://wa.me/447341251404" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp us</a>
@@ -465,14 +493,56 @@ strong{font-weight:700}
 
     <section class="section section-services" id="services" aria-labelledby="services-title">
       <div class="container">
-        <div class="section-heading centered"><p class="section-kicker">OUR SERVICES</p><h2 id="services-title">Tyre problems? We've got you covered.</h2><p>From a sudden flat tyre to a planned replacement, our mobile team brings professional tyre fitting to your location.</p></div>
+        <div class="section-heading centered"><p class="section-kicker">OUR SERVICES</p><h2 id="services-title">Mobile tyre fitting services in Birmingham</h2><p>From urgent roadside help to planned tyre replacement, our mobile tyre fitting service comes to your home, workplace or roadside location with the right tools to get you moving again.</p></div>
         <div class="services-grid">
-          <article class="service-card"><span class="service-icon blue-tint"><svg class="icon"><use href="#i-wheel" /></svg></span><h3>Mobile tyre fitting</h3><p>Professional tyre fitting at your home, workplace or roadside without a garage visit.</p><a href="https://wa.me/447341251404" class="service-link js-service-whatsapp" data-service="Mobile tyre fitting" target="_blank" rel="noopener noreferrer">Enquire now <svg class="icon"><use href="#i-arrow" /></svg></a></article>
-          <article class="service-card"><span class="service-icon orange-tint"><svg class="icon"><use href="#i-bolt" /></svg></span><h3>Emergency tyre call-out</h3><p>Get help when a puncture or damaged tyre means you cannot drive safely.</p><a href="https://wa.me/447341251404" class="service-link js-service-whatsapp" data-service="Emergency tyre call-out" target="_blank" rel="noopener noreferrer">Enquire now <svg class="icon"><use href="#i-arrow" /></svg></a></article>
-          <article class="service-card"><span class="service-icon green-tint"><svg class="icon"><use href="#i-clock" /></svg></span><h3>24/7 tyre assistance</h3><p>Urgent tyre support during the day, at night and on weekends.</p><a href="https://wa.me/447341251404" class="service-link js-service-whatsapp" data-service="24/7 tyre assistance" target="_blank" rel="noopener noreferrer">Enquire now <svg class="icon"><use href="#i-arrow" /></svg></a></article>
-          <article class="service-card"><span class="service-icon purple-tint"><svg class="icon"><use href="#i-calendar" /></svg></span><h3>Same-day tyre fitting</h3><p>Need new tyres today? Ask about same-day fitting and available options.</p><a href="https://wa.me/447341251404" class="service-link js-service-whatsapp" data-service="Same-day tyre fitting" target="_blank" rel="noopener noreferrer">Enquire now <svg class="icon"><use href="#i-arrow" /></svg></a></article>
-          <article class="service-card"><span class="service-icon sky-tint"><svg class="icon"><use href="#i-tool" /></svg></span><h3>Run-flat tyre fitting</h3><p>Specialist installation of run-flat tyres with the right equipment and care.</p><a href="https://wa.me/447341251404" class="service-link js-service-whatsapp" data-service="Run-flat tyre fitting" target="_blank" rel="noopener noreferrer">Enquire now <svg class="icon"><use href="#i-arrow" /></svg></a></article>
-          <article class="service-card"><span class="service-icon yellow-tint"><svg class="icon"><use href="#i-car" /></svg></span><h3>Roadside tyre support</h3><p>On-site help with puncture issues, tyre damage and replacement when you're stuck.</p><a href="https://wa.me/447341251404" class="service-link js-service-whatsapp" data-service="Roadside tyre support" target="_blank" rel="noopener noreferrer">Enquire now <svg class="icon"><use href="#i-arrow" /></svg></a></article>
+          <article class="service-card">
+            <img class="service-photo" src="/services/mobile-tyre-fitting.jpg" alt="Mobile tyre fitting van providing tyre fitting service" loading="lazy" />
+            <div class="service-header"><span class="service-icon blue-tint"><svg class="icon"><use href="#i-wheel" /></svg></span><h3>Mobile tyre fitting</h3></div>
+            <p>Professional mobile tyre fitting at your home, workplace or roadside, so you do not need to visit a garage.</p>
+            <ul class="service-mini-list"><li><svg class="icon"><use href="#i-check" /></svg><span>Home, work and roadside appointments</span></li><li><svg class="icon"><use href="#i-check" /></svg><span>Convenient tyre fitting at your location</span></li></ul>
+            <div class="service-actions"><a class="btn btn-orange js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a href="https://wa.me/447341251404" class="btn btn-outline js-service-whatsapp" data-service="Mobile tyre fitting" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
+            <a href="#get-quote" class="service-link">Get a quick quote <svg class="icon"><use href="#i-arrow" /></svg></a>
+          </article>
+          <article class="service-card">
+            <img class="service-photo" src="/services/emergency-tyre.jpg" alt="Emergency mobile tyre fitting response for damaged tyre" loading="lazy" />
+            <div class="service-header"><span class="service-icon orange-tint"><svg class="icon"><use href="#i-bolt" /></svg></span><h3>Emergency tyre call-out</h3></div>
+            <p>Fast emergency mobile tyre fitting when a puncture, blowout or damaged tyre leaves you unable to continue safely.</p>
+            <ul class="service-mini-list"><li><svg class="icon"><use href="#i-check" /></svg><span>24/7 emergency tyre support</span></li><li><svg class="icon"><use href="#i-check" /></svg><span>Roadside and out-of-hours call-outs</span></li></ul>
+            <div class="service-actions"><a class="btn btn-orange js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a href="https://wa.me/447341251404" class="btn btn-outline js-service-whatsapp" data-service="Emergency tyre call-out" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
+            <a href="#get-quote" class="service-link">Check availability <svg class="icon"><use href="#i-arrow" /></svg></a>
+          </article>
+          <article class="service-card">
+            <img class="service-photo" src="/services/service-3.jpg" alt="24 hour mobile tyre fitting assistance" loading="lazy" />
+            <div class="service-header"><span class="service-icon green-tint"><svg class="icon"><use href="#i-clock" /></svg></span><h3>24/7 tyre assistance</h3></div>
+            <p>Need help day or night? Our 24/7 mobile tyre fitting service helps drivers across Birmingham when they need urgent support.</p>
+            <ul class="service-mini-list"><li><svg class="icon"><use href="#i-check" /></svg><span>Night, weekend and urgent bookings</span></li><li><svg class="icon"><use href="#i-check" /></svg><span>Ideal for punctures and tyre emergencies</span></li></ul>
+            <div class="service-actions"><a class="btn btn-orange js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a href="https://wa.me/447341251404" class="btn btn-outline js-service-whatsapp" data-service="24/7 tyre assistance" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
+            <a href="#get-quote" class="service-link">Request urgent help <svg class="icon"><use href="#i-arrow" /></svg></a>
+          </article>
+          <article class="service-card">
+            <img class="service-photo" src="/services/Same-day.jpg" alt="Same day mobile tyre fitting service" loading="lazy" />
+            <div class="service-header"><span class="service-icon purple-tint"><svg class="icon"><use href="#i-calendar" /></svg></span><h3>Same-day tyre fitting</h3></div>
+            <p>Ask about same-day mobile tyre fitting if you need replacement tyres fitted as quickly as possible.</p>
+            <ul class="service-mini-list"><li><svg class="icon"><use href="#i-check" /></svg><span>Same-day fitting subject to availability</span></li><li><svg class="icon"><use href="#i-check" /></svg><span>Convenient booking and fast response</span></li></ul>
+            <div class="service-actions"><a class="btn btn-orange js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a href="https://wa.me/447341251404" class="btn btn-outline js-service-whatsapp" data-service="Same-day tyre fitting" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
+            <a href="#get-quote" class="service-link">Ask for same-day fitting <svg class="icon"><use href="#i-arrow" /></svg></a>
+          </article>
+          <article class="service-card">
+            <img class="service-photo" src="/services/service-5.jpg" alt="Run flat tyre fitting by mobile tyre technician" loading="lazy" />
+            <div class="service-header"><span class="service-icon sky-tint"><svg class="icon"><use href="#i-tool" /></svg></span><h3>Run-flat tyre fitting</h3></div>
+            <p>Specialist mobile tyre fitting for run-flat tyres using suitable equipment and careful installation.</p>
+            <ul class="service-mini-list"><li><svg class="icon"><use href="#i-check" /></svg><span>Suitable for many cars and premium vehicles</span></li><li><svg class="icon"><use href="#i-check" /></svg><span>Share your tyre size for a quicker quote</span></li></ul>
+            <div class="service-actions"><a class="btn btn-orange js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a href="https://wa.me/447341251404" class="btn btn-outline js-service-whatsapp" data-service="Run-flat tyre fitting" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
+            <a href="#get-quote" class="service-link">Send tyre size <svg class="icon"><use href="#i-arrow" /></svg></a>
+          </article>
+          <article class="service-card">
+            <img class="service-photo" src="/services/tyre-replacement.jpg" alt="Roadside tyre replacement and mobile tyre fitting" loading="lazy" />
+            <div class="service-header"><span class="service-icon yellow-tint"><svg class="icon"><use href="#i-car" /></svg></span><h3>Roadside tyre support</h3></div>
+            <p>On-site roadside tyre replacement and support when you are stranded with a puncture or damaged tyre.</p>
+            <ul class="service-mini-list"><li><svg class="icon"><use href="#i-check" /></svg><span>Roadside help across Birmingham areas</span></li><li><svg class="icon"><use href="#i-check" /></svg><span>Safe, practical tyre replacement on-site</span></li></ul>
+            <div class="service-actions"><a class="btn btn-orange js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a href="https://wa.me/447341251404" class="btn btn-outline js-service-whatsapp" data-service="Roadside tyre support" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
+            <a href="#get-quote" class="service-link">Get roadside support <svg class="icon"><use href="#i-arrow" /></svg></a>
+          </article>
         </div>
       </div>
     </section>
@@ -499,18 +569,22 @@ strong{font-weight:700}
       <div class="container mid-cta-inner"><div class="mid-cta-text"><span class="urgent-pill"><span class="live-dot"></span> EMERGENCY ASSISTANCE</span><h2>Stuck with a flat tyre?</h2><p>Give us your location and we'll confirm the next available assistance.</p></div><div class="mid-cta-actions"><a class="btn btn-orange btn-large js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a class="btn btn-ghost btn-large js-whatsapp" href="https://wa.me/447341251404" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp us</a></div></div>
     </section>
 
-    <section class="section how-section" id="how-it-works" aria-labelledby="how-title"><div class="container"><div class="section-heading centered"><p class="section-kicker">HOW IT WORKS</p><h2 id="how-title">Back on the road in 3 simple steps</h2><p>Tell us what you need and we'll take care of the tyre fitting at your location.</p></div><div class="steps-grid"><article class="step"><span class="step-number">01</span><span class="step-icon"><svg class="icon"><use href="#i-phone" /></svg></span><h3>Call or message us</h3><p>Tell us your location and tyre issue. We'll check availability and discuss the quote.</p></article><article class="step"><span class="step-number">02</span><span class="step-icon"><svg class="icon"><use href="#i-van" /></svg></span><h3>We come to your location</h3><p>Our mobile technician travels to your home, workplace or roadside position.</p></article><article class="step"><span class="step-number">03</span><span class="step-icon"><svg class="icon"><use href="#i-shield" /></svg></span><h3>Tyres fitted safely</h3><p>We fit and check your tyres on-site so you can get moving again.</p></article></div></div></section>
+    <section class="section how-section" id="how-it-works" aria-labelledby="how-title"><div class="container"><div class="section-heading centered"><p class="section-kicker">HOW IT WORKS</p><h2 id="how-title">How our mobile tyre fitting service works</h2><p>Tell us what you need and we'll take care of the tyre fitting at your location.</p></div><div class="steps-grid"><article class="step"><span class="step-number">01</span><span class="step-icon"><svg class="icon"><use href="#i-phone" /></svg></span><h3>Call or message us</h3><p>Tell us your location and tyre issue. We'll check availability and discuss the quote.</p></article><article class="step"><span class="step-number">02</span><span class="step-icon"><svg class="icon"><use href="#i-van" /></svg></span><h3>We come to your location</h3><p>Our mobile technician travels to your home, workplace or roadside position.</p></article><article class="step"><span class="step-number">03</span><span class="step-icon"><svg class="icon"><use href="#i-shield" /></svg></span><h3>Tyres fitted safely</h3><p>We fit and check your tyres on-site so you can get moving again.</p></article></div></div></section>
 
-    <section class="area-section" id="coverage" aria-labelledby="area-title"><div class="container area-grid"><div class="area-icon"><svg class="icon"><use href="#i-pin" /></svg></div><div><p class="section-kicker">WHERE WE WORK</p><h2 id="area-title">Mobile tyre fitting across Birmingham</h2><p>We cover Birmingham postcodes and surrounding areas, including homes, workplaces and roadside locations. Message us your postcode so we can confirm coverage and availability.</p></div><a href="#get-quote" class="btn btn-blue area-cta">Check my location <svg class="icon"><use href="#i-arrow" /></svg></a></div></section>
+    <section class="area-section" id="coverage" aria-labelledby="area-title"><div class="container area-grid"><div class="area-icon"><svg class="icon"><use href="#i-pin" /></svg></div><div><p class="section-kicker">WHERE WE WORK</p><h2 id="area-title">Mobile tyre fitting across Birmingham and nearby areas</h2><p>We cover Birmingham postcodes and surrounding areas, including homes, workplaces and roadside locations. Message us your postcode so we can confirm coverage and availability.</p></div><a href="#get-quote" class="btn btn-blue area-cta">Check my location <svg class="icon"><use href="#i-arrow" /></svg></a></div></section>
+
+    <section class="section gallery-section" id="gallery" aria-labelledby="gallery-title"><div class="container"><div class="section-heading centered"><p class="section-kicker">SERVICE GALLERY</p><h2 id="gallery-title">Mobile tyre fitting gallery</h2><p>Examples of the mobile tyre fitting, tyre replacement and roadside support services customers ask us for across Birmingham.</p></div><div class="gallery-grid"><figure class="gallery-card"><img src="/services/mobile-tyre-fitting.jpg" alt="Mobile tyre fitting appointment" loading="lazy" /><figcaption class="gallery-card-content"><h3>Mobile tyre fitting at your location</h3><p>We fit tyres at home, at work and at roadside locations for maximum convenience.</p></figcaption></figure><figure class="gallery-card"><img src="/services/emergency-tyre.jpg" alt="Emergency tyre call-out service" loading="lazy" /><figcaption class="gallery-card-content"><h3>Emergency tyre call-out</h3><p>Quick support when a puncture or tyre damage stops you from driving safely.</p></figcaption></figure><figure class="gallery-card"><img src="/services/Same-day.jpg" alt="Same day tyre fitting" loading="lazy" /><figcaption class="gallery-card-content"><h3>Same-day tyre fitting</h3><p>Ask us about same-day tyre fitting and available tyre options for your vehicle.</p></figcaption></figure><figure class="gallery-card"><img src="/services/tyre-replacement.jpg" alt="Mobile tyre replacement" loading="lazy" /><figcaption class="gallery-card-content"><h3>Tyre replacement</h3><p>Need a damaged or worn tyre replaced? We bring the service directly to you.</p></figcaption></figure><figure class="gallery-card"><img src="/services/service-4.jpg" alt="Roadside tyre support assistance" loading="lazy" /><figcaption class="gallery-card-content"><h3>Roadside tyre support</h3><p>Roadside tyre help for flats, punctures and tyre issues across Birmingham areas.</p></figcaption></figure><figure class="gallery-card"><img src="/services/service-6.jpg" alt="Professional mobile tyre technician at work" loading="lazy" /><figcaption class="gallery-card-content"><h3>Professional mobile tyre service</h3><p>Professional, convenient mobile tyre fitting with clear communication and simple booking.</p></figcaption></figure></div></div></section>
 
     <section class="section reviews-section" aria-labelledby="reviews-title"><div class="container"><div class="section-heading centered"><p class="section-kicker">CUSTOMER FEEDBACK</p><h2 id="reviews-title">What drivers have said</h2><p>Feedback shared on Meli's Mobile Tyre Fitting's main website.</p></div><div class="reviews-grid"><figure class="review-card"><div class="review-stars" aria-label="5 stars">★★★★★</div><blockquote>“Called late evening with a flat tyre and they arrived quicker than expected. Very professional and efficient service.”</blockquote><figcaption><span class="review-avatar">JT</span><span><strong>James T.</strong><small>Customer feedback</small></span></figcaption></figure><figure class="review-card"><div class="review-stars" aria-label="5 stars">★★★★★</div><blockquote>“Booked while at work and the technician came directly to my office. Tyres fitted smoothly with no hassle at all.”</blockquote><figcaption><span class="review-avatar">SM</span><span><strong>Sarah M.</strong><small>Customer feedback</small></span></figcaption></figure><figure class="review-card"><div class="review-stars" aria-label="5 stars">★★★★★</div><blockquote>“Easy booking, confirmation received quickly, and tyres fitted the same day. Smooth experience from start to finish.”</blockquote><figcaption><span class="review-avatar">LJ</span><span><strong>Lisa J.</strong><small>Customer feedback</small></span></figcaption></figure></div></div></section>
 
     <section class="section faq-section" id="faqs" aria-labelledby="faq-title"><div class="container faq-grid"><div class="faq-heading"><p class="section-kicker">COMMON QUESTIONS</p><h2 id="faq-title">Everything you need to know</h2><p>Still have a question? Call our team and we'll help you choose the right service.</p><a class="btn btn-outline js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Ask us by phone</a></div><div class="faq-list"><details><summary>Are you available 24 hours a day?<span class="faq-toggle" aria-hidden="true"></span></summary><p>Yes. Emergency tyre assistance is available 24/7, including nights and weekends. Contact us to confirm a call-out.</p></details><details><summary>Can you fit tyres at my home or workplace?<span class="faq-toggle" aria-hidden="true"></span></summary><p>Yes. We're a fully mobile service and can fit tyres at your home, workplace or roadside location.</p></details><details><summary>Can I get my tyres fitted on the same day?<span class="faq-toggle" aria-hidden="true"></span></summary><p>Same-day fitting is offered, subject to tyre and technician availability. Call early to check your options.</p></details><details><summary>Do you work with cars and vans?<span class="faq-toggle" aria-hidden="true"></span></summary><p>Yes. We provide tyre services for cars, vans and light commercial vehicles.</p></details><details><summary>Can you help with run-flat tyres?<span class="faq-toggle" aria-hidden="true"></span></summary><p>Yes. Our services include specialist run-flat tyre fitting. Send us your tyre size and vehicle details.</p></details><details><summary>How much does a mobile tyre call-out cost?<span class="faq-toggle" aria-hidden="true"></span></summary><p>It depends on your location, vehicle and tyre requirements. Call or WhatsApp us for a clear quote before booking.</p></details></div></div></section>
 
-    <section class="final-cta" aria-labelledby="final-title"><div class="container final-inner"><span class="eyebrow final-eyebrow"><span class="eyebrow-dot"></span> YOUR LOCAL MOBILE TYRE TEAM</span><h2 id="final-title">Need a tyre fitted today?</h2><p>At home, at work or on the roadside — Meli's Mobile Tyre Fitting comes to you across Birmingham and nearby areas.</p><div class="final-actions"><a class="btn btn-orange btn-large js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call <span class="js-phone-text">07341 251404</span></a><a class="btn btn-white btn-large js-whatsapp" href="https://wa.me/447341251404" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> Get a WhatsApp quote</a></div><p class="final-note">Open 24/7 for emergencies · Tyre availability and arrival time confirmed on enquiry</p></div></section>
+    <section class="final-cta" aria-labelledby="final-title"><div class="container final-inner"><span class="eyebrow final-eyebrow"><span class="eyebrow-dot"></span> YOUR LOCAL MOBILE TYRE TEAM</span><h2 id="final-title">Need mobile tyre fitting today?</h2><p>At home, at work or on the roadside — Meli's Mobile Tyre Fitting comes to you across Birmingham and nearby areas.</p><div class="final-actions"><a class="btn btn-orange btn-large js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call <span class="js-phone-text">07341 251404</span></a><a class="btn btn-white btn-large js-whatsapp" href="https://wa.me/447341251404" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> Get a WhatsApp quote</a></div><p class="final-note">Open 24/7 for emergencies · Tyre availability and arrival time confirmed on enquiry</p></div></section>
   </main>
 
   <footer class="footer"><div class="container footer-main"><div class="footer-brand"><a class="brand" href="#top" aria-label="Meli's Mobile Tyre Fitting, top of page"><span class="brand-mark"><svg class="icon"><use href="#i-wheel" /></svg></span><span class="brand-copy"><span class="brand-name">MELI'S</span><span class="brand-sub">MOBILE TYRE FITTING</span></span></a><p>Professional mobile tyre fitting and emergency tyre help at your location across Birmingham and nearby areas.</p></div><div class="footer-links"><h3>Explore</h3><a href="#services">Our services</a><a href="#why-us">Why choose us</a><a href="#how-it-works">How it works</a><a href="#faqs">FAQs</a></div><div class="footer-contact"><h3>Contact us</h3><a class="js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg><span class="js-phone-text">07341 251404</span></a><a href="mailto:info@mobiletyreservice.co.uk"><svg class="icon"><use href="#i-mail" /></svg> info@mobiletyreservice.co.uk</a><p><svg class="icon"><use href="#i-pin" /></svg> Birmingham & surrounding areas</p></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Meli's Mobile Tyre Fitting. All rights reserved.</span><div><a href="#privacy-notice">Privacy information</a><a href="https://melismobiletyre.co.uk/" target="_blank" rel="noopener noreferrer">Main website</a></div></div></footer>
+
+  <div class="floating-contact" aria-label="Floating contact options"><a class="float-btn float-call js-call" href="tel:07341251404" aria-label="Call Meli's Mobile Tyre Fitting"><svg class="icon"><use href="#i-phone" /></svg></a><a class="float-btn float-whatsapp js-whatsapp" href="https://wa.me/447341251404" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Meli's Mobile Tyre Fitting"><svg class="icon"><use href="#i-message" /></svg></a></div>
 
   <div class="mobile-actions" aria-label="Quick contact options"><a class="mobile-call js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a class="mobile-whatsapp js-whatsapp" href="https://wa.me/447341251404" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
 <section id="privacy-notice" class="embedded-privacy" style="padding:32px 0;background:#f5f9fc;border-top:1px solid #e1e9ee"><div class="container" style="max-width:850px"><details><summary style="cursor:pointer;font-weight:800;color:#163a56;font-size:14px">Privacy information — tap to read</summary><div style="color:#64798b;font-size:13px;margin-top:14px;line-height:1.9"><p>This page prepares a WhatsApp message with the location, tyre size and service details you enter. It does not save this form data to a server. WhatsApp receives the details only if you choose to send your prepared message.</p><p style="margin-top:12px">For questions about how your enquiry is handled, contact <a href="mailto:info@mobiletyreservice.co.uk" style="text-decoration:underline">info@mobiletyreservice.co.uk</a>. If the business adds analytics, advertising tags or other tracking, the owner must review and expand this notice before publishing.</p></div></details></div></section>
