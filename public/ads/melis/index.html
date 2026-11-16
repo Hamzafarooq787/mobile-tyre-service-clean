@@ -1,15 +1,32 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
+  <script>
+    // Fill in confirmed business details only. Empty values hide the optional content.
+    const CLIENT_DATA = {
+      googleReviewsUrl: '',
+      googleRating: null,
+      googleReviewCount: null,
+      privacyPolicyUrl: '',
+      areas: [],
+      priceFrom: null,
+      responseTime: '',
+      yearsInBusiness: null,
+      insured: null,
+      guarantee: '',
+      is247: false,
+      hoursText: ''
+    };
+  </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#ffffff" />
-  <meta name="description" content="Need mobile tyre fitting in Birmingham? Meli's Mobile Tyre Fitting provides 24/7 mobile tyre fitting, emergency tyre replacement, same-day tyre fitting and roadside tyre support at your home, workplace or roadside." />
+  <meta name="description" content="Need mobile tyre fitting in Birmingham? Meli's Mobile Tyre Fitting provides mobile tyre fitting, emergency tyre replacement, same-day tyre fitting and roadside tyre support at your home, workplace or roadside." />
   <meta name="robots" content="noindex, follow" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Mobile Tyre Fitting in Birmingham | Meli's Mobile Tyre Fitting" />
-  <meta property="og:description" content="Need mobile tyre fitting in Birmingham? We come to your home, workplace or roadside with 24/7 tyre fitting, emergency call-outs and same-day mobile tyre replacement." />
-  <title>Mobile Tyre Fitting Birmingham | 24/7 Mobile Tyre Replacement | Meli's</title>
+  <meta property="og:description" content="Need mobile tyre fitting in Birmingham? We come to your home, workplace or roadside with tyre fitting, emergency call-outs and same-day mobile tyre replacement." />
+  <title>Mobile Tyre Fitting Birmingham | Mobile Tyre Replacement | Meli's</title>
   <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMxNjNhNTYiLz48Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIyMyIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjYiIGZpbGw9Im5vbmUiLz48Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSI5IiBmaWxsPSIjZmZmIi8+PGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iNCIgZmlsbD0iIzE2M2E1NiIvPjxwYXRoIGQ9Ik0zMiAxMHYxM00zMiA0MXYxM00xMCAzMmgxM20xOCAwaDEzTTE2IDE2bDkgOW0xNCAxNCA5IDlNNDggMTZsLTkgOU0yNSAzOWwtOSA5IiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGNpcmNsZSBjeD0iNTEiIGN5PSIxMyIgcj0iNyIgZmlsbD0iI2YyNzAzYiIvPjwvc3ZnPgo=" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -220,17 +237,6 @@ strong{font-weight:700}
 .area-section h2{font-size:22px}
 .area-section p:not(.section-kicker){font-size:13.5px;color:#728494;max-width:710px;line-height:1.7;margin-top:9px}
 .area-cta{align-self:center}
-/* Reviews */
-.reviews-section{background:#fafcfd}
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.review-card{margin:0;border:1px solid #e7edf1;border-radius:16px;background:white;padding:27px;display:flex;flex-direction:column;min-height:265px}
-.review-stars{letter-spacing:3px;color:#e5a442;font-size:16px}
-.review-card blockquote{margin:16px 0 23px;flex:1;color:#3f5568;font-size:14px;line-height:1.82}
-.review-card figcaption{display:flex;align-items:center;gap:10px;padding-top:15px;border-top:1px solid #edf0f3}
-.review-avatar{display:grid;place-items:center;border-radius:50%;height:37px;width:37px;background:#e5f0f7;color:var(--navy);font:800 11px Manrope,sans-serif}
-.review-card figcaption strong,.review-card figcaption small{display:block;line-height:1.35}
-.review-card figcaption strong{font:800 12px Manrope,sans-serif;color:var(--navy)}
-.review-card figcaption small{font-size:10px;color:#96a4af;margin-top:4px}
 /* FAQ */
 .faq-section{background:white}
 .faq-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:70px}
@@ -308,7 +314,6 @@ strong{font-weight:700}
   .steps-grid{gap:12px}.step{padding-inline:8px}
   .step:not(:last-child):after{width:calc(100% - 90px);right:calc(-50% + 43px)}
   .area-grid{grid-template-columns:auto 1fr}.area-cta{grid-column:2;justify-self:start}
-  .reviews-grid{gap:12px}.review-card{padding:20px}
   .faq-grid{grid-template-columns:1fr;gap:31px}.faq-heading h2,.faq-heading>p:not(.section-kicker){max-width:none}
   .footer-main{gap:25px}
 }
@@ -362,8 +367,6 @@ strong{font-weight:700}
   .area-grid{grid-template-columns:1fr;gap:14px}
   .area-icon{height:53px;width:53px}.area-icon svg{width:27px;height:27px}
   .area-cta{grid-column:1}
-  .reviews-grid{grid-template-columns:1fr;gap:13px}.review-card{min-height:0;padding:23px}
-  .review-card blockquote{margin:12px 0 18px;font-size:13.5px}
   .faq-list summary{font-size:12.5px}
   .final-inner{padding:60px 0}.final-cta h2{font-size:36px}.final-cta p{font-size:14px}
   .final-actions{flex-direction:column;align-items:stretch;max-width:360px;margin-inline:auto}
@@ -391,6 +394,27 @@ strong{font-weight:700}
 
 @media(max-width:355px){.hero-buttons{flex-direction:column}.hero-buttons .btn{width:100%}}
 
+
+[hidden]{display:none!important}
+.header-logo{display:block;width:112px;height:37px;object-fit:contain}
+.site-header .brand{gap:8px;min-width:0}
+.form-field{min-width:0;margin-bottom:12px}
+#quote-form input,#quote-form select{font-size:16px}
+#quote-form input::placeholder{color:#687b89}
+#quote-form .field-error{color:#a12d2d}
+.quote-status{margin-top:12px;font-size:13px;font-weight:700}
+.quote-status:empty{display:none}
+.quote-status[data-state=error]{color:#a12d2d}
+.quote-status[data-state=success]{color:var(--green-dark)}
+.service-actions .service-whatsapp{display:flex;align-items:center;justify-content:center;gap:5px;min-height:44px;color:var(--blue);font-size:12px;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.service-whatsapp .icon{width:15px;height:15px}
+.hero-price{margin-top:12px;font-weight:800;color:var(--navy)}
+.trust-chips{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;padding:0 0 12px;list-style:none}
+.trust-chips li{padding:5px 10px;border-radius:100px;background:var(--surface-blue);color:var(--navy);font-size:12px;font-weight:700}
+#area-list{padding-left:20px;margin:8px 0;overflow-wrap:anywhere}
+#google-profile-score{margin-top:8px}
+@media(max-width:430px){.header-logo{width:72px;height:32px}.site-header .brand{gap:6px}}
+@media(max-width:355px){.site-header .brand-copy{display:none}}
 </style>
 </head>
 <body>
@@ -415,15 +439,15 @@ strong{font-weight:700}
 
   <div class="utility-bar">
     <div class="container utility-inner">
-      <p><span class="live-dot"></span> <strong>24/7 Emergency Tyre Assistance</strong> <span class="utility-hide">— here when you need us</span></p>
+      <p><span class="live-dot"></span> <strong data-open-hours="24/7 Emergency Tyre Assistance">Emergency Tyre Assistance</strong> <span class="utility-hide">— here when you need us</span></p>
       <p class="utility-location"><svg class="icon"><use href="#i-pin" /></svg> Birmingham & surrounding areas</p>
     </div>
   </div>
 
-  <header class="site-header">
+  <header class="site-header" data-button-location="header">
     <div class="container nav-inner">
       <a class="brand" href="#top" aria-label="Meli's Mobile Tyre Fitting, top of page">
-        <span class="brand-mark" aria-hidden="true"><svg class="icon"><use href="#i-wheel" /></svg></span>
+        <img class="header-logo" src="/logo.png" width="112" height="37" alt="" />
         <span class="brand-copy"><span class="brand-name">MELI'S</span><span class="brand-sub">MOBILE TYRE FITTING</span></span>
       </a>
       <nav class="nav-links" aria-label="Main navigation">
@@ -440,40 +464,71 @@ strong{font-weight:700}
   </header>
 
   <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
+    <section class="hero" data-button-location="hero" id="top" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-content">
           <span class="eyebrow"><span class="eyebrow-dot"></span> BIRMINGHAM MOBILE TYRE SERVICE</span>
-          <h1 id="hero-title">Mobile tyre fitting<br /><span>in Birmingham, 24/7.</span></h1>
-          <p class="hero-description">24/7 mobile tyre fitting in Birmingham with emergency tyre replacement at your home, workplace or roadside. No garage visit needed — just tell us where you are and our mobile tyre fitting team will come to you.</p>
+          <h1 id="hero-title">Mobile tyre fitting<br /><span data-open-hours="in Birmingham, 24/7.">in Birmingham.</span></h1>
+          <p class="hero-description">Mobile tyre fitting in Birmingham with emergency tyre replacement at your home, workplace or roadside. No garage visit needed — just tell us where you are and our mobile tyre fitting team will come to you.</p>
           <div class="hero-buttons">
             <a class="btn btn-orange btn-large js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call <span class="js-phone-text">07341 251404</span></a>
-            <a class="btn btn-outline btn-large js-whatsapp" href="https://wa.me/447341251404" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp us</a>
+            <a class="btn btn-outline btn-large js-whatsapp" href="https://wa.me/447341251404?text=Hi%2C%20I%20need%20mobile%20tyre%20fitting.%20My%20location%20is%3A%20" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp us</a>
           </div>
+          <p class="hero-price" id="hero-price" hidden></p>
           <div class="hero-checks" aria-label="Service benefits">
-            <span><svg class="icon"><use href="#i-check" /></svg> Available day & night</span>
+            <span><svg class="icon"><use href="#i-check" /></svg> <span data-open-hours="Available day &amp; night" data-hours-label>Emergency call-outs</span></span>
             <span><svg class="icon"><use href="#i-check" /></svg> Cars & vans</span>
             <span><svg class="icon"><use href="#i-check" /></svg> We come to your location</span>
           </div>
-          <div class="hero-availability"><svg class="icon"><use href="#i-info" /></svg> Response times and tyre availability are confirmed when you contact us.</div>
+          <div class="hero-availability"><svg class="icon"><use href="#i-info" /></svg> <span id="hero-response">Response times and tyre availability are confirmed when you contact us.</span></div>
         </div>
 
         <aside class="quote-card" id="get-quote" aria-labelledby="quote-title">
-          <div class="card-topline"><span class="card-top-icon"><svg class="icon"><use href="#i-message" /></svg></span><span class="card-availability"><span class="live-dot"></span> Enquiries welcome 24/7</span></div>
+          <div class="card-topline"><span class="card-top-icon"><svg class="icon"><use href="#i-message" /></svg></span><span class="card-availability"><span class="live-dot"></span> <span data-open-hours="Enquiries welcome 24/7" data-hours-label>Quote enquiries</span></span></div>
           <h2 id="quote-title">Get a quick tyre quote</h2>
           <p class="quote-subtitle">Share a few details. We'll help you find the right tyre service.</p>
-          <form id="quote-form" novalidate>
-            <label for="postcode">Your postcode or location <span class="required">*</span></label>
-            <div class="input-wrap"><svg class="icon"><use href="#i-pin" /></svg><input id="postcode" name="postcode" type="text" placeholder="e.g. B1 1AA" autocomplete="postal-code" required maxlength="100" /></div>
-            <p class="field-error" id="postcode-error" aria-live="polite"></p>
+          <form id="quote-form" method="post" novalidate>
             <div class="input-pair">
-              <div><label for="service">What do you need? <span class="required">*</span></label><select id="service" name="service" required><option value="">Choose a service</option><option>Mobile tyre fitting</option><option>Emergency tyre call-out</option><option>24/7 tyre assistance</option><option>Same-day tyre fitting</option><option>Run-flat tyre fitting</option><option>Roadside tyre support</option></select></div>
-              <div><label for="vehicle">Vehicle type</label><select id="vehicle" name="vehicle"><option value="">Select vehicle</option><option>Car</option><option>Van</option><option>Light commercial vehicle</option></select></div>
+              <div class="form-field">
+                <label for="full-name">Your name <span class="required" aria-hidden="true">*</span></label>
+                <input id="full-name" name="fullName" type="text" autocomplete="name" required maxlength="100" aria-describedby="full-name-error" />
+                <p class="field-error" id="full-name-error"></p>
+              </div>
+              <div class="form-field">
+                <label for="quote-phone">Phone number <span class="required" aria-hidden="true">*</span></label>
+                <input id="quote-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="30" aria-describedby="quote-phone-error" />
+                <p class="field-error" id="quote-phone-error"></p>
+              </div>
             </div>
-            <p class="field-error" id="service-error" aria-live="polite"></p>
+            <div class="form-field">
+              <label for="postcode">Your postcode or location <span class="required" aria-hidden="true">*</span></label>
+              <div class="input-wrap"><svg class="icon" aria-hidden="true"><use href="#i-pin" /></svg><input id="postcode" name="postcode" type="text" placeholder="e.g. B1 1AA" autocomplete="postal-code" required maxlength="100" aria-describedby="postcode-error" /></div>
+              <p class="field-error" id="postcode-error"></p>
+            </div>
+            <div class="input-pair">
+              <div class="form-field">
+                <label for="service">What do you need? <span class="required" aria-hidden="true">*</span></label>
+                <select id="service" name="service" required aria-describedby="service-error">
+                  <option value="">Choose a service</option>
+                  <option>Mobile tyre fitting</option>
+                  <option>Emergency tyre call-out</option>
+                  <option data-open-hours="24/7 tyre assistance">Urgent tyre assistance</option>
+                  <option>Same-day tyre fitting</option>
+                  <option>Run-flat tyre fitting</option>
+                  <option>Roadside tyre support</option>
+                </select>
+                <p class="field-error" id="service-error"></p>
+              </div>
+              <div class="form-field">
+                <label for="vehicle">Vehicle type</label>
+                <select id="vehicle" name="vehicle"><option value="">Select vehicle</option><option>Car</option><option>Van</option><option>Light commercial vehicle</option></select>
+              </div>
+            </div>
             <label for="tyre-size">Tyre size <span class="optional">(if known)</span></label>
-            <div class="input-wrap"><svg class="icon"><use href="#i-wheel" /></svg><input id="tyre-size" name="tyreSize" type="text" placeholder="e.g. 205/55 R16" maxlength="60" /></div>
-            <button type="submit" class="btn btn-green quote-submit"><svg class="icon"><use href="#i-message" /></svg> Request quote on WhatsApp <svg class="icon arrow"><use href="#i-arrow" /></svg></button>
+            <div class="input-wrap"><svg class="icon" aria-hidden="true"><use href="#i-wheel" /></svg><input id="tyre-size" name="tyreSize" type="text" placeholder="e.g. 205/55 R16" maxlength="60" /></div>
+            <button type="submit" class="btn btn-green quote-submit" disabled><svg class="icon" aria-hidden="true"><use href="#i-message" /></svg> Request quote on WhatsApp <svg class="icon arrow" aria-hidden="true"><use href="#i-arrow" /></svg></button>
+            <p id="quote-status" class="quote-status" role="status" aria-live="polite" aria-atomic="true"></p>
+            <noscript><p class="quote-status">Use the WhatsApp or call button to request a quote.</p></noscript>
             <p class="quote-disclaimer"><svg class="icon"><use href="#i-shield" /></svg> Opens WhatsApp with your details. You choose when to send the message.</p>
           </form>
           <div class="quote-card-footer">Need help immediately? <a class="js-call" href="tel:07341251404">Call our team <svg class="icon"><use href="#i-arrow" /></svg></a></div>
@@ -484,73 +539,74 @@ strong{font-weight:700}
 
     <section class="benefit-bar" aria-label="Key service benefits">
       <div class="container benefit-grid">
-        <div class="benefit-item"><span class="benefit-icon"><svg class="icon"><use href="#i-clock" /></svg></span><span><strong>24/7 tyre assistance</strong><small>Help when you need it</small></span></div>
+        <div class="benefit-item"><span class="benefit-icon"><svg class="icon"><use href="#i-clock" /></svg></span><span><strong data-open-hours="24/7 tyre assistance">Urgent tyre assistance</strong><small>Help when you need it</small></span></div>
         <div class="benefit-item"><span class="benefit-icon"><svg class="icon"><use href="#i-van" /></svg></span><span><strong>We come to you</strong><small>Home, work or roadside</small></span></div>
         <div class="benefit-item"><span class="benefit-icon"><svg class="icon"><use href="#i-calendar" /></svg></span><span><strong>Same-day fitting</strong><small>Subject to availability</small></span></div>
         <div class="benefit-item"><span class="benefit-icon"><svg class="icon"><use href="#i-shield" /></svg></span><span><strong>Professional service</strong><small>Safe, careful fitting</small></span></div>
       </div>
+      <ul class="container trust-chips" id="trust-chips" aria-label="Business information" hidden></ul>
     </section>
 
-    <section class="section section-services" id="services" aria-labelledby="services-title">
+    <section class="section section-services" data-button-location="services" id="services" aria-labelledby="services-title">
       <div class="container">
         <div class="section-heading centered"><p class="section-kicker">OUR SERVICES</p><h2 id="services-title">Mobile tyre fitting services in Birmingham</h2><p>From urgent roadside help to planned tyre replacement, our mobile tyre fitting service comes to your home, workplace or roadside location with the right tools to get you moving again.</p></div>
         <div class="services-grid">
           <article class="service-card">
-            <img class="service-photo" src="/services/mobile-tyre-fitting.jpg" alt="Mobile tyre fitting van providing tyre fitting service" loading="lazy" />
+            <img class="service-photo" src="/services/mobile-tyre-fitting.jpg" alt="Tyre fitter rolling a replacement tyre beside a car" loading="lazy" />
             <div class="service-header"><span class="service-icon blue-tint"><svg class="icon"><use href="#i-wheel" /></svg></span><h3>Mobile tyre fitting</h3></div>
             <p>Professional mobile tyre fitting at your home, workplace or roadside, so you do not need to visit a garage.</p>
             <ul class="service-mini-list"><li><svg class="icon"><use href="#i-check" /></svg><span>Home, work and roadside appointments</span></li><li><svg class="icon"><use href="#i-check" /></svg><span>Convenient tyre fitting at your location</span></li></ul>
-            <div class="service-actions"><a class="btn btn-orange js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a href="https://wa.me/447341251404" class="btn btn-outline js-service-whatsapp" data-service="Mobile tyre fitting" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
+            <div class="service-actions"><a class="btn btn-orange js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a href="https://wa.me/447341251404?text=Hi%2C%20I%20need%20mobile%20tyre%20fitting.%20My%20location%20is%3A%20" class="service-whatsapp" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
             <a href="#get-quote" class="service-link">Get a quick quote <svg class="icon"><use href="#i-arrow" /></svg></a>
           </article>
           <article class="service-card">
-            <img class="service-photo" src="/services/emergency-tyre.jpg" alt="Emergency mobile tyre fitting response for damaged tyre" loading="lazy" />
+            <img class="service-photo" src="/services/emergency-tyre.jpg" alt="Roadside tyre technician beside a raised car" loading="lazy" />
             <div class="service-header"><span class="service-icon orange-tint"><svg class="icon"><use href="#i-bolt" /></svg></span><h3>Emergency tyre call-out</h3></div>
             <p>Fast emergency mobile tyre fitting when a puncture, blowout or damaged tyre leaves you unable to continue safely.</p>
-            <ul class="service-mini-list"><li><svg class="icon"><use href="#i-check" /></svg><span>24/7 emergency tyre support</span></li><li><svg class="icon"><use href="#i-check" /></svg><span>Roadside and out-of-hours call-outs</span></li></ul>
-            <div class="service-actions"><a class="btn btn-orange js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a href="https://wa.me/447341251404" class="btn btn-outline js-service-whatsapp" data-service="Emergency tyre call-out" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
+            <ul class="service-mini-list"><li><svg class="icon"><use href="#i-check" /></svg><span data-open-hours="24/7 emergency tyre support">Emergency tyre support</span></li><li><svg class="icon"><use href="#i-check" /></svg><span>Roadside call-outs</span></li></ul>
+            <div class="service-actions"><a class="btn btn-orange js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a href="https://wa.me/447341251404?text=Hi%2C%20I%20need%20mobile%20tyre%20fitting.%20My%20location%20is%3A%20" class="service-whatsapp" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
             <a href="#get-quote" class="service-link">Check availability <svg class="icon"><use href="#i-arrow" /></svg></a>
           </article>
           <article class="service-card">
-            <img class="service-photo" src="/services/service-3.jpg" alt="24 hour mobile tyre fitting assistance" loading="lazy" />
-            <div class="service-header"><span class="service-icon green-tint"><svg class="icon"><use href="#i-clock" /></svg></span><h3>24/7 tyre assistance</h3></div>
-            <p>Need help day or night? Our 24/7 mobile tyre fitting service helps drivers across Birmingham when they need urgent support.</p>
+            <img class="service-photo" src="/services/service-3.jpg" alt="Tyre technician carrying a replacement car tyre" loading="lazy" />
+            <div class="service-header"><span class="service-icon green-tint"><svg class="icon"><use href="#i-clock" /></svg></span><h3 data-open-hours="24/7 tyre assistance">Urgent tyre assistance</h3></div>
+            <p>Need urgent tyre help in Birmingham? Contact us to check availability.</p>
             <ul class="service-mini-list"><li><svg class="icon"><use href="#i-check" /></svg><span>Night, weekend and urgent bookings</span></li><li><svg class="icon"><use href="#i-check" /></svg><span>Ideal for punctures and tyre emergencies</span></li></ul>
-            <div class="service-actions"><a class="btn btn-orange js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a href="https://wa.me/447341251404" class="btn btn-outline js-service-whatsapp" data-service="24/7 tyre assistance" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
+            <div class="service-actions"><a class="btn btn-orange js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a href="https://wa.me/447341251404?text=Hi%2C%20I%20need%20mobile%20tyre%20fitting.%20My%20location%20is%3A%20" class="service-whatsapp" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
             <a href="#get-quote" class="service-link">Request urgent help <svg class="icon"><use href="#i-arrow" /></svg></a>
           </article>
           <article class="service-card">
-            <img class="service-photo" src="/services/Same-day.jpg" alt="Same day mobile tyre fitting service" loading="lazy" />
+            <img class="service-photo" src="/services/Same-day.jpg" alt="Technician tightening a car wheel after fitting a tyre" loading="lazy" />
             <div class="service-header"><span class="service-icon purple-tint"><svg class="icon"><use href="#i-calendar" /></svg></span><h3>Same-day tyre fitting</h3></div>
             <p>Ask about same-day mobile tyre fitting if you need replacement tyres fitted as quickly as possible.</p>
             <ul class="service-mini-list"><li><svg class="icon"><use href="#i-check" /></svg><span>Same-day fitting subject to availability</span></li><li><svg class="icon"><use href="#i-check" /></svg><span>Convenient booking and fast response</span></li></ul>
-            <div class="service-actions"><a class="btn btn-orange js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a href="https://wa.me/447341251404" class="btn btn-outline js-service-whatsapp" data-service="Same-day tyre fitting" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
+            <div class="service-actions"><a class="btn btn-orange js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a href="https://wa.me/447341251404?text=Hi%2C%20I%20need%20mobile%20tyre%20fitting.%20My%20location%20is%3A%20" class="service-whatsapp" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
             <a href="#get-quote" class="service-link">Ask for same-day fitting <svg class="icon"><use href="#i-arrow" /></svg></a>
           </article>
           <article class="service-card">
-            <img class="service-photo" src="/services/service-5.jpg" alt="Run flat tyre fitting by mobile tyre technician" loading="lazy" />
+            <img class="service-photo" src="/services/service-5.jpg" alt="Tyre fitter kneeling by a wheel on a white van" loading="lazy" />
             <div class="service-header"><span class="service-icon sky-tint"><svg class="icon"><use href="#i-tool" /></svg></span><h3>Run-flat tyre fitting</h3></div>
             <p>Specialist mobile tyre fitting for run-flat tyres using suitable equipment and careful installation.</p>
             <ul class="service-mini-list"><li><svg class="icon"><use href="#i-check" /></svg><span>Suitable for many cars and premium vehicles</span></li><li><svg class="icon"><use href="#i-check" /></svg><span>Share your tyre size for a quicker quote</span></li></ul>
-            <div class="service-actions"><a class="btn btn-orange js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a href="https://wa.me/447341251404" class="btn btn-outline js-service-whatsapp" data-service="Run-flat tyre fitting" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
+            <div class="service-actions"><a class="btn btn-orange js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a href="https://wa.me/447341251404?text=Hi%2C%20I%20need%20mobile%20tyre%20fitting.%20My%20location%20is%3A%20" class="service-whatsapp" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
             <a href="#get-quote" class="service-link">Send tyre size <svg class="icon"><use href="#i-arrow" /></svg></a>
           </article>
           <article class="service-card">
-            <img class="service-photo" src="/services/tyre-replacement.jpg" alt="Roadside tyre replacement and mobile tyre fitting" loading="lazy" />
+            <img class="service-photo" src="/services/tyre-replacement.jpg" alt="Mechanic removing a car wheel for a tyre change" loading="lazy" />
             <div class="service-header"><span class="service-icon yellow-tint"><svg class="icon"><use href="#i-car" /></svg></span><h3>Roadside tyre support</h3></div>
             <p>On-site roadside tyre replacement and support when you are stranded with a puncture or damaged tyre.</p>
             <ul class="service-mini-list"><li><svg class="icon"><use href="#i-check" /></svg><span>Roadside help across Birmingham areas</span></li><li><svg class="icon"><use href="#i-check" /></svg><span>Safe, practical tyre replacement on-site</span></li></ul>
-            <div class="service-actions"><a class="btn btn-orange js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a href="https://wa.me/447341251404" class="btn btn-outline js-service-whatsapp" data-service="Roadside tyre support" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
+            <div class="service-actions"><a class="btn btn-orange js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a href="https://wa.me/447341251404?text=Hi%2C%20I%20need%20mobile%20tyre%20fitting.%20My%20location%20is%3A%20" class="service-whatsapp" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
             <a href="#get-quote" class="service-link">Get roadside support <svg class="icon"><use href="#i-arrow" /></svg></a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section why-section" id="why-us" aria-labelledby="why-title">
+    <section class="section why-section" data-button-location="services" id="why-us" aria-labelledby="why-title">
       <div class="container why-grid">
         <div class="illustration-wrap">
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3NjAgNjEwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+Cjx0aXRsZSBpZD0idGl0bGUiPk1lbGkncyBNb2JpbGUgVHlyZSBGaXR0aW5nIHNlcnZpY2UgdmFuPC90aXRsZT48ZGVzYyBpZD0iZGVzYyI+QSBjbGVhbiBpbGx1c3RyYXRpb24gb2YgYSBtb2JpbGUgdHlyZSBmaXR0aW5nIHZhbiB3aXRoIHJvYWQgYW5kIHdoZWVsIGRldGFpbHMuPC9kZXNjPgo8ZGVmcz4KIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB4Mj0iMSIgeTE9IjAiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZWRmNmZjIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZTRlZmY2Ii8+PC9saW5lYXJHcmFkaWVudD4KIDxsaW5lYXJHcmFkaWVudCBpZD0idmFuIiB4MT0iMCIgeDI9IjAiIHkxPSIwIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2VlZjNmNiIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9IndoZWVsIiB4MT0iMCIgeDI9IjEiIHkxPSIwIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iIzJkNDA1MSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBjMWMyYSIvPjwvbGluZWFyR3JhZGllbnQ+CiA8ZmlsdGVyIGlkPSJzaGFkb3ciIHg9Ii00MCUiIHk9Ii00MCUiIHdpZHRoPSIxODAlIiBoZWlnaHQ9IjE4MCUiPjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjE2Ii8+PC9maWx0ZXI+CjwvZGVmcz4KPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9Ijc2MCIgaGVpZ2h0PSI2MTAiIHJ4PSIyMiIgZmlsbD0idXJsKCNiZykiLz4KPGNpcmNsZSBjeD0iNTkxIiBjeT0iMTcyIiByPSIxMzMiIGZpbGw9IiNkY2ViZjQiLz48Y2lyY2xlIGN4PSIxNzQiIGN5PSIxNjUiIHI9Ijg2IiBmaWxsPSIjZTZmM2Y5Ii8+CjxnIG9wYWNpdHk9Ii40NSIgZmlsbD0iIzlmYzVkOSI+PGNpcmNsZSBjeD0iNzQiIGN5PSIxMDMiIHI9IjMiLz48Y2lyY2xlIGN4PSI5NCIgY3k9IjEwMyIgcj0iMyIvPjxjaXJjbGUgY3g9IjExNCIgY3k9IjEwMyIgcj0iMyIvPjxjaXJjbGUgY3g9Ijc0IiBjeT0iMTIzIiByPSIzIi8+PGNpcmNsZSBjeD0iOTQiIGN5PSIxMjMiIHI9IjMiLz48Y2lyY2xlIGN4PSIxMTQiIGN5PSIxMjMiIHI9IjMiLz48Y2lyY2xlIGN4PSI3NCIgY3k9IjE0MyIgcj0iMyIvPjxjaXJjbGUgY3g9Ijk0IiBjeT0iMTQzIiByPSIzIi8+PGNpcmNsZSBjeD0iMTE0IiBjeT0iMTQzIiByPSIzIi8+PC9nPgo8cGF0aCBkPSJNMCA0NjVjMTEwLTIxIDE5OC0zNiAzMDItMjMgMTM3IDE4IDIxMiA5IDMwMS0xMyA4MS0yMCAxMjAtMTEgMTU3LTR2MTg1SDBaIiBmaWxsPSIjZDJlNmYxIi8+PHBhdGggZD0iTTAgNTExaDc2MHY5OUgwWiIgZmlsbD0iIzliYjdjOCIvPgo8cGF0aCBkPSJNMCA1MjloNzYwIiBzdHJva2U9IiM3YzlhYWEiIHN0cm9rZS13aWR0aD0iMyIvPjxnIHN0cm9rZT0iI2U4ZjJmOCIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiPjxwYXRoIGQ9Ik00NSA1NjZoOTYiLz48cGF0aCBkPSJNMjM4IDU2Nmg5NSIvPjxwYXRoIGQ9Ik00MjkgNTY2aDk2Ii8+PHBhdGggZD0iTTYyNCA1NjZoOTUiLz48L2c+CjxlbGxpcHNlIGN4PSIzODkiIGN5PSI0OTciIHJ4PSIzMDYiIHJ5PSIyOSIgZmlsbD0iIzRhNzE4OCIgb3BhY2l0eT0iLjIiIGZpbHRlcj0idXJsKCNzaGFkb3cpIi8+CjwhLS0gcmVhciB2YW4gY29tcGFydG1lbnQgLS0+CjxwYXRoIGQ9Ik0xMDQgMjgxcTAtMjMgMjMtMjNoMzc2cTIyIDAgMjIgMjN2MTkwSDEwNFoiIGZpbGw9InVybCgjdmFuKSIgc3Ryb2tlPSIjYjJjOWQ1IiBzdHJva2Utd2lkdGg9IjMiLz4KPHBhdGggZD0iTTEyMSAyNjRoMzY4IiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iOSIgb3BhY2l0eT0iLjciLz4KPHJlY3QgeD0iMTA5IiB5PSIyNzMiIHdpZHRoPSIzOTgiIGhlaWdodD0iMTEiIHJ4PSI1IiBmaWxsPSIjZGJlOGVlIi8+CjwhLS0gdmFuIGZyb250IC0tPgo8cGF0aCBkPSJNNTA1IDMxM2g5OXEyNSAwIDM5IDI0bDQ0IDc0cTggMTMgOCAyOXYzMUg1MDVaIiBmaWxsPSJ1cmwoI3ZhbikiIHN0cm9rZT0iI2IyYzlkNSIgc3Ryb2tlLXdpZHRoPSIzIi8+CjxwYXRoIGQ9Ik01OTAgMzI0aDE1cTE2IDAgMjUgMTRsMzMgNTFoLTc0WiIgZmlsbD0iI2FjY2RkZCIgc3Ryb2tlPSIjNzk5YWFjIiBzdHJva2Utd2lkdGg9IjMiLz4KPHBhdGggZD0iTTU5NyAzMjZoNHExMCAwIDE0IDlsMjggNDZoLTQ2WiIgZmlsbD0iI2QzZWFmNCIgb3BhY2l0eT0iLjYiLz4KPHBhdGggZD0iTTY3MSA0MThoMjEiIHN0cm9rZT0iIzkwYThiNCIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHJlY3QgeD0iNjQyIiB5PSI0MzUiIHdpZHRoPSIxOCIgaGVpZ2h0PSI3IiByeD0iMyIgZmlsbD0iI2ExYjdjNCIvPgo8cGF0aCBkPSJNNjg3IDQ0Mmg4djE1aC04IiBmaWxsPSIjZTk2OTM0Ii8+CjxwYXRoIGQ9Ik0xMDcgNDQ1aDU4N3YyOEgxMDdaIiBmaWxsPSIjZGNlN2VlIi8+CjxyZWN0IHg9IjEwNyIgeT0iNDUzIiB3aWR0aD0iNTc5IiBoZWlnaHQ9IjEwIiByeD0iNCIgZmlsbD0iI2QxZTFlOSIvPgo8cmVjdCB4PSIxMTAiIHk9IjQ2NyIgd2lkdGg9IjU4MCIgaGVpZ2h0PSI4IiByeD0iMyIgZmlsbD0iI2U5NjkzNCIvPgo8IS0tIGJyYW5kaW5nIC0tPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDUgMzE2KSI+PGNpcmNsZSBjeD0iMzQiIGN5PSIzNCIgcj0iMjkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFkNGI2YyIgc3Ryb2tlLXdpZHRoPSI4Ii8+PGNpcmNsZSBjeD0iMzQiIGN5PSIzNCIgcj0iMTIiIGZpbGw9IiMxZDRiNmMiLz48ZyBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48cGF0aCBkPSJNMzQgMjN2MjJNMjMgMzRoMjJNMjYgMjZsMTYgMTZtMC0xNkwyNiA0MiIvPjwvZz48Y2lyY2xlIGN4PSI1NiIgY3k9IjEyIiByPSI4IiBmaWxsPSIjZTk2OTM0Ii8+PC9nPgo8dGV4dCB4PSIyMjMiIHk9IjM0MiIgZm9udC1mYW1pbHk9IkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMxIiBmb250LXdlaWdodD0iODAwIiBmaWxsPSIjMTgzZjVjIiBsZXR0ZXItc3BhY2luZz0iMSI+TUVMSSdTPC90ZXh0Pgo8dGV4dCB4PSIyMjQiIHk9IjM2NiIgZm9udC1mYW1pbHk9IkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyLjUiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiM1YTc1ODciIGxldHRlci1zcGFjaW5nPSIyIj5NT0JJTEUgVFlSRSBGSVRUSU5HPC90ZXh0Pgo8cmVjdCB4PSIxNDMiIHk9IjM4OSIgd2lkdGg9IjMyNiIgaGVpZ2h0PSIzNyIgcng9IjgiIGZpbGw9IiNlOGYyZjciLz4KPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTI4NGExIiBzdHJva2Utd2lkdGg9IjIiPjxwYXRoIGQ9Ik0xNjkgNDA1djltLTQtNWg4Ii8+PHBhdGggZD0iTTI3OSA0MDN2MTNtLTYtN2gxMiIvPjxwYXRoIGQ9Ik0zODkgNDAzdjEzbS02LTdoMTIiLz48L2c+CjxnIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjNDY2YjgzIj48dGV4dCB4PSIxODUiIHk9IjQxMyI+MjQvNyBIZWxwPC90ZXh0Pjx0ZXh0IHg9IjI5NSIgeT0iNDEzIj5Sb2Fkc2lkZTwvdGV4dD48dGV4dCB4PSI0MDUiIHk9IjQxMyI+T24tc2l0ZTwvdGV4dD48L2c+CjwhLS0gd2hlZWxzIC0tPgo8Zz4KPGNpcmNsZSBjeD0iMjMyIiBjeT0iNDczIiByPSI2MSIgZmlsbD0idXJsKCN3aGVlbCkiLz48Y2lyY2xlIGN4PSIyMzIiIGN5PSI0NzMiIHI9IjQ3IiBzdHJva2U9IiM1MDY1NzUiIHN0cm9rZS13aWR0aD0iNSIgZmlsbD0iIzI2Mzk0OCIvPjxjaXJjbGUgY3g9IjIzMiIgY3k9IjQ3MyIgcj0iMzAiIGZpbGw9IiNkM2RmZTYiIHN0cm9rZT0iIzhhOWVhZCIgc3Ryb2tlLXdpZHRoPSI0Ii8+PGNpcmNsZSBjeD0iMjMyIiBjeT0iNDczIiByPSIxMiIgZmlsbD0iIzc4OGY5ZiIvPgo8cGF0aCBkPSJNMjMyIDQ0NnYxNW0wIDI0djE1bS0yNy0yN2gxNW0yNCAwaDE1bS00Ni0xOSAxMSAxMW0xNyAxNyAxMSAxMW0wLTM5LTExIDExbS0xNyAxNy0xMSAxMSIgc3Ryb2tlPSIjOTFhOGI3IiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8Y2lyY2xlIGN4PSI1OTMiIGN5PSI0NzMiIHI9IjYxIiBmaWxsPSJ1cmwoI3doZWVsKSIvPjxjaXJjbGUgY3g9IjU5MyIgY3k9IjQ3MyIgcj0iNDciIHN0cm9rZT0iIzUwNjU3NSIgc3Ryb2tlLXdpZHRoPSI1IiBmaWxsPSIjMjYzOTQ4Ii8+PGNpcmNsZSBjeD0iNTkzIiBjeT0iNDczIiByPSIzMCIgZmlsbD0iI2QzZGZlNiIgc3Ryb2tlPSIjOGE5ZWFkIiBzdHJva2Utd2lkdGg9IjQiLz48Y2lyY2xlIGN4PSI1OTMiIGN5PSI0NzMiIHI9IjEyIiBmaWxsPSIjNzg4ZjlmIi8+CjxwYXRoIGQ9Ik01OTMgNDQ2djE1bTAgMjR2MTVtLTI3LTI3aDE1bTI0IDBoMTVtLTQ2LTE5IDExIDExbTE3IDE3IDExIDExbTAtMzktMTEgMTFtLTE3IDE3LTExIDExIiBzdHJva2U9IiM5MWE4YjciIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjwvZz4KPCEtLSBkZWNvcmF0aXZlIHNpZ24gLS0+CjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUyNyAxMDUpIj48cmVjdCB3aWR0aD0iMTc2IiBoZWlnaHQ9IjYxIiByeD0iMTQiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2Q4ZTVlYiIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iMTQiIHk9IjEzIiB3aWR0aD0iMzQiIGhlaWdodD0iMzQiIHJ4PSI5IiBmaWxsPSIjZWFmN2YwIi8+PHBhdGggZD0iTTIxIDMwbDggOCAxMy0xNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTk5NDZiIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iNCIvPjx0ZXh0IHg9IjU4IiB5PSIyOCIgZm9udC1mYW1pbHk9IkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBmaWxsPSIjMTgzZDU3IiBmb250LXdlaWdodD0iNzAwIj5XZSBjb21lIHRvIHlvdTwvdGV4dD48dGV4dCB4PSI1OCIgeT0iNDMiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZmlsbD0iIzdlOTNhMiI+QmlybWluZ2hhbTwvdGV4dD48L2c+Cjwvc3ZnPgo=" alt="Illustration of Meli's mobile tyre service van arriving to help a driver" width="760" height="610" loading="eager" />
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3NjAgNjEwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+Cjx0aXRsZSBpZD0idGl0bGUiPk1lbGkncyBNb2JpbGUgVHlyZSBGaXR0aW5nIHNlcnZpY2UgdmFuPC90aXRsZT48ZGVzYyBpZD0iZGVzYyI+QSBjbGVhbiBpbGx1c3RyYXRpb24gb2YgYSBtb2JpbGUgdHlyZSBmaXR0aW5nIHZhbiB3aXRoIHJvYWQgYW5kIHdoZWVsIGRldGFpbHMuPC9kZXNjPgo8ZGVmcz4KIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB4Mj0iMSIgeTE9IjAiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZWRmNmZjIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZTRlZmY2Ii8+PC9saW5lYXJHcmFkaWVudD4KIDxsaW5lYXJHcmFkaWVudCBpZD0idmFuIiB4MT0iMCIgeDI9IjAiIHkxPSIwIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2VlZjNmNiIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9IndoZWVsIiB4MT0iMCIgeDI9IjEiIHkxPSIwIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iIzJkNDA1MSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBjMWMyYSIvPjwvbGluZWFyR3JhZGllbnQ+CiA8ZmlsdGVyIGlkPSJzaGFkb3ciIHg9Ii00MCUiIHk9Ii00MCUiIHdpZHRoPSIxODAlIiBoZWlnaHQ9IjE4MCUiPjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjE2Ii8+PC9maWx0ZXI+CjwvZGVmcz4KPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9Ijc2MCIgaGVpZ2h0PSI2MTAiIHJ4PSIyMiIgZmlsbD0idXJsKCNiZykiLz4KPGNpcmNsZSBjeD0iNTkxIiBjeT0iMTcyIiByPSIxMzMiIGZpbGw9IiNkY2ViZjQiLz48Y2lyY2xlIGN4PSIxNzQiIGN5PSIxNjUiIHI9Ijg2IiBmaWxsPSIjZTZmM2Y5Ii8+CjxnIG9wYWNpdHk9Ii40NSIgZmlsbD0iIzlmYzVkOSI+PGNpcmNsZSBjeD0iNzQiIGN5PSIxMDMiIHI9IjMiLz48Y2lyY2xlIGN4PSI5NCIgY3k9IjEwMyIgcj0iMyIvPjxjaXJjbGUgY3g9IjExNCIgY3k9IjEwMyIgcj0iMyIvPjxjaXJjbGUgY3g9Ijc0IiBjeT0iMTIzIiByPSIzIi8+PGNpcmNsZSBjeD0iOTQiIGN5PSIxMjMiIHI9IjMiLz48Y2lyY2xlIGN4PSIxMTQiIGN5PSIxMjMiIHI9IjMiLz48Y2lyY2xlIGN4PSI3NCIgY3k9IjE0MyIgcj0iMyIvPjxjaXJjbGUgY3g9Ijk0IiBjeT0iMTQzIiByPSIzIi8+PGNpcmNsZSBjeD0iMTE0IiBjeT0iMTQzIiByPSIzIi8+PC9nPgo8cGF0aCBkPSJNMCA0NjVjMTEwLTIxIDE5OC0zNiAzMDItMjMgMTM3IDE4IDIxMiA5IDMwMS0xMyA4MS0yMCAxMjAtMTEgMTU3LTR2MTg1SDBaIiBmaWxsPSIjZDJlNmYxIi8+PHBhdGggZD0iTTAgNTExaDc2MHY5OUgwWiIgZmlsbD0iIzliYjdjOCIvPgo8cGF0aCBkPSJNMCA1MjloNzYwIiBzdHJva2U9IiM3YzlhYWEiIHN0cm9rZS13aWR0aD0iMyIvPjxnIHN0cm9rZT0iI2U4ZjJmOCIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiPjxwYXRoIGQ9Ik00NSA1NjZoOTYiLz48cGF0aCBkPSJNMjM4IDU2Nmg5NSIvPjxwYXRoIGQ9Ik00MjkgNTY2aDk2Ii8+PHBhdGggZD0iTTYyNCA1NjZoOTUiLz48L2c+CjxlbGxpcHNlIGN4PSIzODkiIGN5PSI0OTciIHJ4PSIzMDYiIHJ5PSIyOSIgZmlsbD0iIzRhNzE4OCIgb3BhY2l0eT0iLjIiIGZpbHRlcj0idXJsKCNzaGFkb3cpIi8+CjwhLS0gcmVhciB2YW4gY29tcGFydG1lbnQgLS0+CjxwYXRoIGQ9Ik0xMDQgMjgxcTAtMjMgMjMtMjNoMzc2cTIyIDAgMjIgMjN2MTkwSDEwNFoiIGZpbGw9InVybCgjdmFuKSIgc3Ryb2tlPSIjYjJjOWQ1IiBzdHJva2Utd2lkdGg9IjMiLz4KPHBhdGggZD0iTTEyMSAyNjRoMzY4IiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iOSIgb3BhY2l0eT0iLjciLz4KPHJlY3QgeD0iMTA5IiB5PSIyNzMiIHdpZHRoPSIzOTgiIGhlaWdodD0iMTEiIHJ4PSI1IiBmaWxsPSIjZGJlOGVlIi8+CjwhLS0gdmFuIGZyb250IC0tPgo8cGF0aCBkPSJNNTA1IDMxM2g5OXEyNSAwIDM5IDI0bDQ0IDc0cTggMTMgOCAyOXYzMUg1MDVaIiBmaWxsPSJ1cmwoI3ZhbikiIHN0cm9rZT0iI2IyYzlkNSIgc3Ryb2tlLXdpZHRoPSIzIi8+CjxwYXRoIGQ9Ik01OTAgMzI0aDE1cTE2IDAgMjUgMTRsMzMgNTFoLTc0WiIgZmlsbD0iI2FjY2RkZCIgc3Ryb2tlPSIjNzk5YWFjIiBzdHJva2Utd2lkdGg9IjMiLz4KPHBhdGggZD0iTTU5NyAzMjZoNHExMCAwIDE0IDlsMjggNDZoLTQ2WiIgZmlsbD0iI2QzZWFmNCIgb3BhY2l0eT0iLjYiLz4KPHBhdGggZD0iTTY3MSA0MThoMjEiIHN0cm9rZT0iIzkwYThiNCIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHJlY3QgeD0iNjQyIiB5PSI0MzUiIHdpZHRoPSIxOCIgaGVpZ2h0PSI3IiByeD0iMyIgZmlsbD0iI2ExYjdjNCIvPgo8cGF0aCBkPSJNNjg3IDQ0Mmg4djE1aC04IiBmaWxsPSIjZTk2OTM0Ii8+CjxwYXRoIGQ9Ik0xMDcgNDQ1aDU4N3YyOEgxMDdaIiBmaWxsPSIjZGNlN2VlIi8+CjxyZWN0IHg9IjEwNyIgeT0iNDUzIiB3aWR0aD0iNTc5IiBoZWlnaHQ9IjEwIiByeD0iNCIgZmlsbD0iI2QxZTFlOSIvPgo8cmVjdCB4PSIxMTAiIHk9IjQ2NyIgd2lkdGg9IjU4MCIgaGVpZ2h0PSI4IiByeD0iMyIgZmlsbD0iI2U5NjkzNCIvPgo8IS0tIGJyYW5kaW5nIC0tPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDUgMzE2KSI+PGNpcmNsZSBjeD0iMzQiIGN5PSIzNCIgcj0iMjkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFkNGI2YyIgc3Ryb2tlLXdpZHRoPSI4Ii8+PGNpcmNsZSBjeD0iMzQiIGN5PSIzNCIgcj0iMTIiIGZpbGw9IiMxZDRiNmMiLz48ZyBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48cGF0aCBkPSJNMzQgMjN2MjJNMjMgMzRoMjJNMjYgMjZsMTYgMTZtMC0xNkwyNiA0MiIvPjwvZz48Y2lyY2xlIGN4PSI1NiIgY3k9IjEyIiByPSI4IiBmaWxsPSIjZTk2OTM0Ii8+PC9nPgo8dGV4dCB4PSIyMjMiIHk9IjM0MiIgZm9udC1mYW1pbHk9IkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMxIiBmb250LXdlaWdodD0iODAwIiBmaWxsPSIjMTgzZjVjIiBsZXR0ZXItc3BhY2luZz0iMSI+TUVMSSdTPC90ZXh0Pgo8dGV4dCB4PSIyMjQiIHk9IjM2NiIgZm9udC1mYW1pbHk9IkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyLjUiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiM1YTc1ODciIGxldHRlci1zcGFjaW5nPSIyIj5NT0JJTEUgVFlSRSBGSVRUSU5HPC90ZXh0Pgo8cmVjdCB4PSIxNDMiIHk9IjM4OSIgd2lkdGg9IjMyNiIgaGVpZ2h0PSIzNyIgcng9IjgiIGZpbGw9IiNlOGYyZjciLz4KPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTI4NGExIiBzdHJva2Utd2lkdGg9IjIiPjxwYXRoIGQ9Ik0xNjkgNDA1djltLTQtNWg4Ii8+PHBhdGggZD0iTTI3OSA0MDN2MTNtLTYtN2gxMiIvPjxwYXRoIGQ9Ik0zODkgNDAzdjEzbS02LTdoMTIiLz48L2c+CjxnIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjNDY2YjgzIj48dGV4dCB4PSIxODUiIHk9IjQxMyI+VHlyZSBIZWxwPC90ZXh0Pjx0ZXh0IHg9IjI5NSIgeT0iNDEzIj5Sb2Fkc2lkZTwvdGV4dD48dGV4dCB4PSI0MDUiIHk9IjQxMyI+T24tc2l0ZTwvdGV4dD48L2c+CjwhLS0gd2hlZWxzIC0tPgo8Zz4KPGNpcmNsZSBjeD0iMjMyIiBjeT0iNDczIiByPSI2MSIgZmlsbD0idXJsKCN3aGVlbCkiLz48Y2lyY2xlIGN4PSIyMzIiIGN5PSI0NzMiIHI9IjQ3IiBzdHJva2U9IiM1MDY1NzUiIHN0cm9rZS13aWR0aD0iNSIgZmlsbD0iIzI2Mzk0OCIvPjxjaXJjbGUgY3g9IjIzMiIgY3k9IjQ3MyIgcj0iMzAiIGZpbGw9IiNkM2RmZTYiIHN0cm9rZT0iIzhhOWVhZCIgc3Ryb2tlLXdpZHRoPSI0Ii8+PGNpcmNsZSBjeD0iMjMyIiBjeT0iNDczIiByPSIxMiIgZmlsbD0iIzc4OGY5ZiIvPgo8cGF0aCBkPSJNMjMyIDQ0NnYxNW0wIDI0djE1bS0yNy0yN2gxNW0yNCAwaDE1bS00Ni0xOSAxMSAxMW0xNyAxNyAxMSAxMW0wLTM5LTExIDExbS0xNyAxNy0xMSAxMSIgc3Ryb2tlPSIjOTFhOGI3IiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8Y2lyY2xlIGN4PSI1OTMiIGN5PSI0NzMiIHI9IjYxIiBmaWxsPSJ1cmwoI3doZWVsKSIvPjxjaXJjbGUgY3g9IjU5MyIgY3k9IjQ3MyIgcj0iNDciIHN0cm9rZT0iIzUwNjU3NSIgc3Ryb2tlLXdpZHRoPSI1IiBmaWxsPSIjMjYzOTQ4Ii8+PGNpcmNsZSBjeD0iNTkzIiBjeT0iNDczIiByPSIzMCIgZmlsbD0iI2QzZGZlNiIgc3Ryb2tlPSIjOGE5ZWFkIiBzdHJva2Utd2lkdGg9IjQiLz48Y2lyY2xlIGN4PSI1OTMiIGN5PSI0NzMiIHI9IjEyIiBmaWxsPSIjNzg4ZjlmIi8+CjxwYXRoIGQ9Ik01OTMgNDQ2djE1bTAgMjR2MTVtLTI3LTI3aDE1bTI0IDBoMTVtLTQ2LTE5IDExIDExbTE3IDE3IDExIDExbTAtMzktMTEgMTFtLTE3IDE3LTExIDExIiBzdHJva2U9IiM5MWE4YjciIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjwvZz4KPCEtLSBkZWNvcmF0aXZlIHNpZ24gLS0+CjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUyNyAxMDUpIj48cmVjdCB3aWR0aD0iMTc2IiBoZWlnaHQ9IjYxIiByeD0iMTQiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2Q4ZTVlYiIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iMTQiIHk9IjEzIiB3aWR0aD0iMzQiIGhlaWdodD0iMzQiIHJ4PSI5IiBmaWxsPSIjZWFmN2YwIi8+PHBhdGggZD0iTTIxIDMwbDggOCAxMy0xNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTk5NDZiIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iNCIvPjx0ZXh0IHg9IjU4IiB5PSIyOCIgZm9udC1mYW1pbHk9IkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBmaWxsPSIjMTgzZDU3IiBmb250LXdlaWdodD0iNzAwIj5XZSBjb21lIHRvIHlvdTwvdGV4dD48dGV4dCB4PSI1OCIgeT0iNDMiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZmlsbD0iIzdlOTNhMiI+QmlybWluZ2hhbTwvdGV4dD48L2c+Cjwvc3ZnPgo=" alt="Meli’s mobile tyre fitting van illustration" width="760" height="610" loading="eager" />
           <div class="illustration-label"><svg class="icon"><use href="#i-pin" /></svg><span><strong>Across Birmingham</strong><small>At your location, not ours</small></span></div>
         </div>
         <div class="why-content"><p class="section-kicker">WHY CHOOSE MELI'S</p><h2 id="why-title">Your time matters. <span>We bring the service to you.</span></h2><p class="why-intro">Skip the stress of getting your car to a garage. Our team arrives equipped to handle your tyre issue where you are.</p>
@@ -558,140 +614,234 @@ strong{font-weight:700}
             <div class="why-point"><span><svg class="icon"><use href="#i-check" /></svg></span><div><h3>Convenient mobile service</h3><p>Tyre fitting at home, work or at the roadside.</p></div></div>
             <div class="why-point"><span><svg class="icon"><use href="#i-check" /></svg></span><div><h3>Experienced technicians</h3><p>Professional equipment and careful safety checks.</p></div></div>
             <div class="why-point"><span><svg class="icon"><use href="#i-check" /></svg></span><div><h3>Clear, fair pricing</h3><p>Get a quote for your tyre requirements before work begins.</p></div></div>
-            <div class="why-point"><span><svg class="icon"><use href="#i-check" /></svg></span><div><h3>Help around the clock</h3><p>24/7 urgent assistance, including nights and weekends.</p></div></div>
+            <div class="why-point"><span><svg class="icon"><use href="#i-check" /></svg></span><div><h3>Urgent tyre help</h3><p data-open-hours="24/7 urgent assistance, including nights and weekends." data-hours-label>Call us to confirm availability.</p></div></div>
           </div>
           <a class="text-action js-call" href="tel:07341251404">Speak to our team <svg class="icon"><use href="#i-arrow" /></svg></a>
         </div>
       </div>
     </section>
 
-    <section class="mid-cta" aria-label="Need urgent help">
-      <div class="container mid-cta-inner"><div class="mid-cta-text"><span class="urgent-pill"><span class="live-dot"></span> EMERGENCY ASSISTANCE</span><h2>Stuck with a flat tyre?</h2><p>Give us your location and we'll confirm the next available assistance.</p></div><div class="mid-cta-actions"><a class="btn btn-orange btn-large js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a class="btn btn-ghost btn-large js-whatsapp" href="https://wa.me/447341251404" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp us</a></div></div>
+    <section class="mid-cta" data-button-location="emergency" aria-label="Need urgent help">
+      <div class="container mid-cta-inner"><div class="mid-cta-text"><span class="urgent-pill"><span class="live-dot"></span> EMERGENCY ASSISTANCE</span><h2>Stuck with a flat tyre?</h2><p>Give us your location and we'll confirm the next available assistance.</p></div><div class="mid-cta-actions"><a class="btn btn-orange btn-large js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a class="btn btn-ghost btn-large js-whatsapp" href="https://wa.me/447341251404?text=Hi%2C%20I%20need%20mobile%20tyre%20fitting.%20My%20location%20is%3A%20" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp us</a></div></div>
     </section>
 
     <section class="section how-section" id="how-it-works" aria-labelledby="how-title"><div class="container"><div class="section-heading centered"><p class="section-kicker">HOW IT WORKS</p><h2 id="how-title">How our mobile tyre fitting service works</h2><p>Tell us what you need and we'll take care of the tyre fitting at your location.</p></div><div class="steps-grid"><article class="step"><span class="step-number">01</span><span class="step-icon"><svg class="icon"><use href="#i-phone" /></svg></span><h3>Call or message us</h3><p>Tell us your location and tyre issue. We'll check availability and discuss the quote.</p></article><article class="step"><span class="step-number">02</span><span class="step-icon"><svg class="icon"><use href="#i-van" /></svg></span><h3>We come to your location</h3><p>Our mobile technician travels to your home, workplace or roadside position.</p></article><article class="step"><span class="step-number">03</span><span class="step-icon"><svg class="icon"><use href="#i-shield" /></svg></span><h3>Tyres fitted safely</h3><p>We fit and check your tyres on-site so you can get moving again.</p></article></div></div></section>
 
-    <section class="area-section" id="coverage" aria-labelledby="area-title"><div class="container area-grid"><div class="area-icon"><svg class="icon"><use href="#i-pin" /></svg></div><div><p class="section-kicker">WHERE WE WORK</p><h2 id="area-title">Mobile tyre fitting across Birmingham and nearby areas</h2><p>We cover Birmingham postcodes and surrounding areas, including homes, workplaces and roadside locations. Message us your postcode so we can confirm coverage and availability.</p></div><a href="#get-quote" class="btn btn-blue area-cta">Check my location <svg class="icon"><use href="#i-arrow" /></svg></a></div></section>
+    <section class="area-section" id="coverage" aria-labelledby="area-title"><div class="container area-grid"><div class="area-icon"><svg class="icon"><use href="#i-pin" /></svg></div><div><p class="section-kicker">WHERE WE WORK</p><h2 id="area-title">Mobile tyre fitting across Birmingham and nearby areas</h2><p>We cover Birmingham postcodes and surrounding areas, including homes, workplaces and roadside locations. Message us your postcode so we can confirm coverage and availability.</p><div id="configured-areas" hidden><h3>Areas we cover</h3><ul id="area-list"></ul></div></div><a href="#get-quote" class="btn btn-blue area-cta">Check my location <svg class="icon"><use href="#i-arrow" /></svg></a></div></section>
 
-    <section class="section gallery-section" id="gallery" aria-labelledby="gallery-title"><div class="container"><div class="section-heading centered"><p class="section-kicker">SERVICE GALLERY</p><h2 id="gallery-title">Mobile tyre fitting gallery</h2><p>Examples of the mobile tyre fitting, tyre replacement and roadside support services customers ask us for across Birmingham.</p></div><div class="gallery-grid"><figure class="gallery-card"><img src="/services/mobile-tyre-fitting.jpg" alt="Mobile tyre fitting appointment" loading="lazy" /><figcaption class="gallery-card-content"><h3>Mobile tyre fitting at your location</h3><p>We fit tyres at home, at work and at roadside locations for maximum convenience.</p></figcaption></figure><figure class="gallery-card"><img src="/services/emergency-tyre.jpg" alt="Emergency tyre call-out service" loading="lazy" /><figcaption class="gallery-card-content"><h3>Emergency tyre call-out</h3><p>Quick support when a puncture or tyre damage stops you from driving safely.</p></figcaption></figure><figure class="gallery-card"><img src="/services/Same-day.jpg" alt="Same day tyre fitting" loading="lazy" /><figcaption class="gallery-card-content"><h3>Same-day tyre fitting</h3><p>Ask us about same-day tyre fitting and available tyre options for your vehicle.</p></figcaption></figure><figure class="gallery-card"><img src="/services/tyre-replacement.jpg" alt="Mobile tyre replacement" loading="lazy" /><figcaption class="gallery-card-content"><h3>Tyre replacement</h3><p>Need a damaged or worn tyre replaced? We bring the service directly to you.</p></figcaption></figure><figure class="gallery-card"><img src="/services/service-4.jpg" alt="Roadside tyre support assistance" loading="lazy" /><figcaption class="gallery-card-content"><h3>Roadside tyre support</h3><p>Roadside tyre help for flats, punctures and tyre issues across Birmingham areas.</p></figcaption></figure><figure class="gallery-card"><img src="/services/service-6.jpg" alt="Professional mobile tyre technician at work" loading="lazy" /><figcaption class="gallery-card-content"><h3>Professional mobile tyre service</h3><p>Professional, convenient mobile tyre fitting with clear communication and simple booking.</p></figcaption></figure></div></div></section>
+    <section class="section gallery-section" id="gallery" aria-labelledby="gallery-title"><div class="container"><div class="section-heading centered"><p class="section-kicker">SERVICE GALLERY</p><h2 id="gallery-title">Mobile tyre fitting gallery</h2><p>Examples of the mobile tyre fitting, tyre replacement and roadside support services customers ask us for across Birmingham.</p></div><div class="gallery-grid">
+      <figure class="gallery-card"><img src="/services/service-1.jpg" alt="Tyre fitter using a wheel wrench beside a van" loading="lazy" /><figcaption class="gallery-card-content"><h3>Van tyre replacement</h3></figcaption></figure>
+      <figure class="gallery-card"><img src="/services/service-2.jpg" alt="Driver rolling a spare wheel beside a car on the roadside" loading="lazy" /><figcaption class="gallery-card-content"><h3>Roadside tyre help</h3></figcaption></figure>
+      <figure class="gallery-card"><img src="/services/service-6.jpg" alt="Two people working by a car wheel at the roadside" loading="lazy" /><figcaption class="gallery-card-content"><h3>Roadside wheel change</h3></figcaption></figure>
+    </div></div></section>
 
-    <section class="section reviews-section" aria-labelledby="reviews-title"><div class="container"><div class="section-heading centered"><p class="section-kicker">CUSTOMER FEEDBACK</p><h2 id="reviews-title">What drivers have said</h2><p>Feedback shared on Meli's Mobile Tyre Fitting's main website.</p></div><div class="reviews-grid"><figure class="review-card"><div class="review-stars" aria-label="5 stars">★★★★★</div><blockquote>“Called late evening with a flat tyre and they arrived quicker than expected. Very professional and efficient service.”</blockquote><figcaption><span class="review-avatar">JT</span><span><strong>James T.</strong><small>Customer feedback</small></span></figcaption></figure><figure class="review-card"><div class="review-stars" aria-label="5 stars">★★★★★</div><blockquote>“Booked while at work and the technician came directly to my office. Tyres fitted smoothly with no hassle at all.”</blockquote><figcaption><span class="review-avatar">SM</span><span><strong>Sarah M.</strong><small>Customer feedback</small></span></figcaption></figure><figure class="review-card"><div class="review-stars" aria-label="5 stars">★★★★★</div><blockquote>“Easy booking, confirmation received quickly, and tyres fitted the same day. Smooth experience from start to finish.”</blockquote><figcaption><span class="review-avatar">LJ</span><span><strong>Lisa J.</strong><small>Customer feedback</small></span></figcaption></figure></div></div></section>
+    <section class="section" id="google-profile-block" hidden>
+      <div class="container section-heading centered">
+        <a class="btn btn-outline" id="google-profile" target="_blank" rel="noopener noreferrer"></a>
+        <p id="google-profile-score"></p>
+      </div>
+    </section>
 
-    <section class="section faq-section" id="faqs" aria-labelledby="faq-title"><div class="container faq-grid"><div class="faq-heading"><p class="section-kicker">COMMON QUESTIONS</p><h2 id="faq-title">Everything you need to know</h2><p>Still have a question? Call our team and we'll help you choose the right service.</p><a class="btn btn-outline js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Ask us by phone</a></div><div class="faq-list"><details><summary>Are you available 24 hours a day?<span class="faq-toggle" aria-hidden="true"></span></summary><p>Yes. Emergency tyre assistance is available 24/7, including nights and weekends. Contact us to confirm a call-out.</p></details><details><summary>Can you fit tyres at my home or workplace?<span class="faq-toggle" aria-hidden="true"></span></summary><p>Yes. We're a fully mobile service and can fit tyres at your home, workplace or roadside location.</p></details><details><summary>Can I get my tyres fitted on the same day?<span class="faq-toggle" aria-hidden="true"></span></summary><p>Same-day fitting is offered, subject to tyre and technician availability. Call early to check your options.</p></details><details><summary>Do you work with cars and vans?<span class="faq-toggle" aria-hidden="true"></span></summary><p>Yes. We provide tyre services for cars, vans and light commercial vehicles.</p></details><details><summary>Can you help with run-flat tyres?<span class="faq-toggle" aria-hidden="true"></span></summary><p>Yes. Our services include specialist run-flat tyre fitting. Send us your tyre size and vehicle details.</p></details><details><summary>How much does a mobile tyre call-out cost?<span class="faq-toggle" aria-hidden="true"></span></summary><p>It depends on your location, vehicle and tyre requirements. Call or WhatsApp us for a clear quote before booking.</p></details></div></div></section>
+    <section class="section faq-section" data-button-location="services" id="faqs" aria-labelledby="faq-title"><div class="container faq-grid"><div class="faq-heading"><p class="section-kicker">COMMON QUESTIONS</p><h2 id="faq-title">Everything you need to know</h2><p>Still have a question? Call our team and we'll help you choose the right service.</p><a class="btn btn-outline js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Ask us by phone</a></div><div class="faq-list"><details><summary>When can I book a call-out?<span class="faq-toggle" aria-hidden="true"></span></summary><p data-open-hours="Emergency tyre assistance is available 24/7. Contact us to confirm a call-out." data-hours-label>Contact us to check availability for an emergency call-out.</p></details><details><summary>Can you fit tyres at my home or workplace?<span class="faq-toggle" aria-hidden="true"></span></summary><p>Yes. We're a fully mobile service and can fit tyres at your home, workplace or roadside location.</p></details><details><summary>Can I get my tyres fitted on the same day?<span class="faq-toggle" aria-hidden="true"></span></summary><p>Same-day fitting is offered, subject to tyre and technician availability. Call early to check your options.</p></details><details><summary>Do you work with cars and vans?<span class="faq-toggle" aria-hidden="true"></span></summary><p>Yes. We provide tyre services for cars, vans and light commercial vehicles.</p></details><details><summary>Can you help with run-flat tyres?<span class="faq-toggle" aria-hidden="true"></span></summary><p>Yes. Our services include specialist run-flat tyre fitting. Send us your tyre size and vehicle details.</p></details><details><summary>How much does a mobile tyre call-out cost?<span class="faq-toggle" aria-hidden="true"></span></summary><p><span id="faq-price" hidden></span> It depends on your location, vehicle and tyre requirements. Call or WhatsApp us for a clear quote before booking.</p></details></div></div></section>
 
-    <section class="final-cta" aria-labelledby="final-title"><div class="container final-inner"><span class="eyebrow final-eyebrow"><span class="eyebrow-dot"></span> YOUR LOCAL MOBILE TYRE TEAM</span><h2 id="final-title">Need mobile tyre fitting today?</h2><p>At home, at work or on the roadside — Meli's Mobile Tyre Fitting comes to you across Birmingham and nearby areas.</p><div class="final-actions"><a class="btn btn-orange btn-large js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call <span class="js-phone-text">07341 251404</span></a><a class="btn btn-white btn-large js-whatsapp" href="https://wa.me/447341251404" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> Get a WhatsApp quote</a></div><p class="final-note">Open 24/7 for emergencies · Tyre availability and arrival time confirmed on enquiry</p></div></section>
+    <section class="final-cta" data-button-location="final_cta" aria-labelledby="final-title"><div class="container final-inner"><span class="eyebrow final-eyebrow"><span class="eyebrow-dot"></span> YOUR LOCAL MOBILE TYRE TEAM</span><h2 id="final-title">Need mobile tyre fitting today?</h2><p>At home, at work or on the roadside — Meli's Mobile Tyre Fitting comes to you across Birmingham and nearby areas.</p><div class="final-actions"><a class="btn btn-orange btn-large js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call <span class="js-phone-text">07341 251404</span></a><a class="btn btn-white btn-large js-whatsapp" href="https://wa.me/447341251404?text=Hi%2C%20I%20need%20mobile%20tyre%20fitting.%20My%20location%20is%3A%20" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> Get a WhatsApp quote</a></div><p class="final-note"><span data-open-hours="Open 24/7 for emergencies" data-hours-label>Emergency call-outs</span> · <span id="final-response">Tyre availability and arrival time confirmed on enquiry</span></p></div></section>
   </main>
 
-  <footer class="footer"><div class="container footer-main"><div class="footer-brand"><a class="brand" href="#top" aria-label="Meli's Mobile Tyre Fitting, top of page"><span class="brand-mark"><svg class="icon"><use href="#i-wheel" /></svg></span><span class="brand-copy"><span class="brand-name">MELI'S</span><span class="brand-sub">MOBILE TYRE FITTING</span></span></a><p>Professional mobile tyre fitting and emergency tyre help at your location across Birmingham and nearby areas.</p></div><div class="footer-links"><h3>Explore</h3><a href="#services">Our services</a><a href="#why-us">Why choose us</a><a href="#how-it-works">How it works</a><a href="#faqs">FAQs</a></div><div class="footer-contact"><h3>Contact us</h3><a class="js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg><span class="js-phone-text">07341 251404</span></a><a href="mailto:info@mobiletyreservice.co.uk"><svg class="icon"><use href="#i-mail" /></svg> info@mobiletyreservice.co.uk</a><p><svg class="icon"><use href="#i-pin" /></svg> Birmingham & surrounding areas</p></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Meli's Mobile Tyre Fitting. All rights reserved.</span><div><a href="#privacy-notice">Privacy information</a><a href="https://melismobiletyre.co.uk/" target="_blank" rel="noopener noreferrer">Main website</a></div></div></footer>
+  <footer class="footer" data-button-location="footer"><div class="container footer-main"><div class="footer-brand"><a class="brand" href="#top" aria-label="Meli's Mobile Tyre Fitting, top of page"><span class="brand-mark"><svg class="icon"><use href="#i-wheel" /></svg></span><span class="brand-copy"><span class="brand-name">MELI'S</span><span class="brand-sub">MOBILE TYRE FITTING</span></span></a><p>Professional mobile tyre fitting and emergency tyre help at your location across Birmingham and nearby areas.</p></div><div class="footer-links"><h3>Explore</h3><a href="#services">Our services</a><a href="#gallery">Gallery</a><a href="#why-us">Why choose us</a><a href="#how-it-works">How it works</a><a href="#faqs">FAQs</a></div><div class="footer-contact"><h3>Contact us</h3><a class="js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg><span class="js-phone-text">07341 251404</span></a><a href="mailto:info@mobiletyreservice.co.uk"><svg class="icon"><use href="#i-mail" /></svg> info@mobiletyreservice.co.uk</a><p><svg class="icon"><use href="#i-pin" /></svg> Birmingham & surrounding areas</p></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Meli's Mobile Tyre Fitting. All rights reserved.</span><div><a href="#privacy-notice">Privacy information</a><a href="https://melismobiletyre.co.uk/" target="_blank" rel="noopener noreferrer">Main website</a></div></div></footer>
 
-  <div class="floating-contact" aria-label="Floating contact options"><a class="float-btn float-call js-call" href="tel:07341251404" aria-label="Call Meli's Mobile Tyre Fitting"><svg class="icon"><use href="#i-phone" /></svg></a><a class="float-btn float-whatsapp js-whatsapp" href="https://wa.me/447341251404" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Meli's Mobile Tyre Fitting"><svg class="icon"><use href="#i-message" /></svg></a></div>
+  <div class="floating-contact" data-button-location="footer" aria-label="Floating contact options"><a class="float-btn float-call js-call" href="tel:07341251404" aria-label="Call Meli's Mobile Tyre Fitting"><svg class="icon"><use href="#i-phone" /></svg></a><a class="float-btn float-whatsapp js-whatsapp" href="https://wa.me/447341251404?text=Hi%2C%20I%20need%20mobile%20tyre%20fitting.%20My%20location%20is%3A%20" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Meli's Mobile Tyre Fitting"><svg class="icon"><use href="#i-message" /></svg></a></div>
 
-  <div class="mobile-actions" aria-label="Quick contact options"><a class="mobile-call js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a class="mobile-whatsapp js-whatsapp" href="https://wa.me/447341251404" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
-<section id="privacy-notice" class="embedded-privacy" style="padding:32px 0;background:#f5f9fc;border-top:1px solid #e1e9ee"><div class="container" style="max-width:850px"><details><summary style="cursor:pointer;font-weight:800;color:#163a56;font-size:14px">Privacy information — tap to read</summary><div style="color:#64798b;font-size:13px;margin-top:14px;line-height:1.9"><p>This page prepares a WhatsApp message with the location, tyre size and service details you enter. It does not save this form data to a server. WhatsApp receives the details only if you choose to send your prepared message.</p><p style="margin-top:12px">For questions about how your enquiry is handled, contact <a href="mailto:info@mobiletyreservice.co.uk" style="text-decoration:underline">info@mobiletyreservice.co.uk</a>. If the business adds analytics, advertising tags or other tracking, the owner must review and expand this notice before publishing.</p></div></details></div></section>
-  <script>
-/*
-  BUSINESS CONFIGURATION
-  The client's current homepage shows a different phone number from their
-  Contact, About and Services pages. This build uses the number displayed
-  on the Contact page. Confirm it before running paid ads.
-*/
-const BUSINESS = {
-  displayPhone: '07341 251404',
-  dialPhone: '07341251404',
-  whatsappPhone: '447341251404',
-  name: "Meli's Mobile Tyre Fitting"
-};
+  <div class="mobile-actions" data-button-location="footer" aria-label="Quick contact options"><a class="mobile-call js-call" href="tel:07341251404"><svg class="icon"><use href="#i-phone" /></svg> Call now</a><a class="mobile-whatsapp js-whatsapp" href="https://wa.me/447341251404?text=Hi%2C%20I%20need%20mobile%20tyre%20fitting.%20My%20location%20is%3A%20" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-message" /></svg> WhatsApp</a></div>
+<section id="privacy-notice" class="embedded-privacy" style="padding:32px 0;background:#f5f9fc;border-top:1px solid #e1e9ee">
+  <div class="container" style="max-width:850px">
+    <details>
+      <summary style="cursor:pointer;font-weight:800;color:#163a56;font-size:14px">Privacy information — tap to read</summary>
+      <div style="color:#64798b;font-size:13px;margin-top:14px;line-height:1.9">
+        <p>We use the postcode, tyre size and contact details you send only to reply to your request by WhatsApp or phone. The form opens a draft in WhatsApp for you to send.</p>
+        <p id="privacy-policy-row" hidden><a id="privacy-policy" style="text-decoration:underline">Read our privacy policy</a></p>
+      </div>
+    </details>
+  </div>
+</section>
+<script>
+function applyClientData() {
+  const hours = CLIENT_DATA.hoursText.trim();
+  for (const item of document.querySelectorAll('[data-open-hours]')) {
+    if (CLIENT_DATA.is247 === true) {
+      item.textContent = item.dataset.openHours;
+    } else if (hours && item.hasAttribute('data-hours-label')) {
+      item.textContent = hours;
+    }
+  }
 
-const whatsappUrl = (message) => `https://wa.me/${BUSINESS.whatsappPhone}?text=${encodeURIComponent(message)}`;
-const defaultMessage = `Hi ${BUSINESS.name}, I need mobile tyre assistance in Birmingham. Could you please confirm availability and pricing?`;
+  const areas = CLIENT_DATA.areas.map(area => area.trim()).filter(Boolean);
+  if (areas.length) {
+    const list = document.getElementById('area-list');
+    for (const area of areas) {
+      const item = document.createElement('li');
+      item.textContent = area;
+      list.append(item);
+    }
+    document.getElementById('configured-areas').hidden = false;
+  }
 
-// Data Layer events can be used as triggers in a real GTM container once added.
-// A click is an intent signal, NOT proof of a completed phone call or message.
-function trackLead(leadType, details = {}) {
+  if (Number.isFinite(CLIENT_DATA.priceFrom) && CLIENT_DATA.priceFrom > 0) {
+    const price = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP', maximumFractionDigits: 2, minimumFractionDigits: 0 }).format(CLIENT_DATA.priceFrom);
+    for (const id of ['hero-price', 'faq-price']) {
+      const item = document.getElementById(id);
+      item.textContent = 'From ' + price + (id === 'faq-price' ? '.' : '');
+      item.hidden = false;
+    }
+  }
+
+  const responseTime = CLIENT_DATA.responseTime.trim();
+  if (responseTime) {
+    document.getElementById('hero-response').textContent = responseTime;
+    document.getElementById('final-response').textContent = responseTime;
+  }
+
+  const trustItems = [
+    Number.isInteger(CLIENT_DATA.yearsInBusiness) && CLIENT_DATA.yearsInBusiness > 0
+      ? CLIENT_DATA.yearsInBusiness + (CLIENT_DATA.yearsInBusiness === 1 ? ' year in business' : ' years in business')
+      : '',
+    CLIENT_DATA.insured === true ? 'Insured' : '',
+    CLIENT_DATA.guarantee.trim()
+  ].filter(Boolean);
+  const chips = document.getElementById('trust-chips');
+  for (const label of trustItems) {
+    const chip = document.createElement('li');
+    chip.textContent = label;
+    chips.append(chip);
+  }
+  chips.hidden = !trustItems.length;
+
+  function setHttpsLink(id, value) {
+    if (!value.trim()) return false;
+    try {
+      const url = new URL(value, location.origin);
+      if (url.protocol !== 'https:' && url.origin !== location.origin) return false;
+      document.getElementById(id).href = url.href;
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  if (setHttpsLink('privacy-policy', CLIENT_DATA.privacyPolicyUrl)) {
+    document.getElementById('privacy-policy-row').hidden = false;
+  }
+
+  if (setHttpsLink('google-profile', CLIENT_DATA.googleReviewsUrl)) {
+    document.getElementById('google-profile').textContent = 'See our Google reviews';
+    document.getElementById('google-profile-block').hidden = false;
+    const numbers = [
+      Number.isFinite(CLIENT_DATA.googleRating) && CLIENT_DATA.googleRating > 0 && CLIENT_DATA.googleRating <= 5
+        ? CLIENT_DATA.googleRating + ' out of 5' : '',
+      Number.isInteger(CLIENT_DATA.googleReviewCount) && CLIENT_DATA.googleReviewCount > 0
+        ? CLIENT_DATA.googleReviewCount.toLocaleString('en-GB') + (CLIENT_DATA.googleReviewCount === 1 ? ' review' : ' reviews') : ''
+    ].filter(Boolean);
+    document.getElementById('google-profile-score').textContent = numbers.join(' · ');
+  }
+}
+
+const callLinks = 'a[href^="tel:"]';
+const whatsappLinks = 'a[href^="https://wa.me/"]';
+
+function trackContact(event, buttonLocation, serviceName) {
   window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({ event: 'melis_contact_click', lead_type: leadType, landing_page: 'birmingham-mobile-tyres', ...details });
+  const data = { event, button_location: buttonLocation };
+  if (serviceName) data.service_name = serviceName;
+  window.dataLayer.push(data);
 }
 
-function setupContactLinks() {
-  document.querySelectorAll('.js-phone-text').forEach((el) => { el.textContent = BUSINESS.displayPhone; });
-  document.querySelectorAll('.js-call').forEach((link) => {
-    link.setAttribute('href', `tel:${BUSINESS.dialPhone}`);
-    link.addEventListener('click', () => trackLead('phone_click'));
-  });
-  document.querySelectorAll('.js-whatsapp').forEach((link) => {
-    link.setAttribute('href', whatsappUrl(defaultMessage));
-    link.addEventListener('click', () => trackLead('whatsapp_click'));
-  });
-  document.querySelectorAll('.js-service-whatsapp').forEach((link) => {
-    const service = link.getAttribute('data-service') || 'mobile tyre assistance';
-    link.setAttribute('href', whatsappUrl(`Hi ${BUSINESS.name}, I am interested in ${service} in Birmingham. Can you confirm availability and pricing?`));
-    link.addEventListener('click', () => trackLead('service_whatsapp_click', { service }));
-  });
+function trackLink(event) {
+  if (!(event.target instanceof Element)) return;
+  const link = event.target.closest(callLinks + ', ' + whatsappLinks);
+  if (!link) return;
+  const buttonLocation = link.closest('[data-button-location]').dataset.buttonLocation;
+  const service = link.closest('.service-card')?.querySelector('h3')?.textContent.trim();
+  trackContact(link.matches(callLinks) ? 'call_click' : 'whatsapp_click', buttonLocation, service);
 }
+
+document.addEventListener('click', trackLink);
+document.addEventListener('auxclick', event => {
+  if (event.button === 1) trackLink(event);
+});
 
 function setupQuoteForm() {
   const form = document.getElementById('quote-form');
-  if (!form) return;
-  const postcode = document.getElementById('postcode');
-  const service = document.getElementById('service');
-  const locationError = document.getElementById('postcode-error');
-  const serviceError = document.getElementById('service-error');
+  const status = document.getElementById('quote-status');
+  const fields = [
+    [form.elements.fullName, value => value ? '' : 'Enter your name.'],
+    [form.elements.phone, value => {
+      if (!value) return 'Enter your phone number.';
+      const compact = value.replace(/[\s().-]/g, '');
+      const national = compact.replace(/^(?:\+44|0044)0?/, '0');
+      return /^0(?:1\d{8,9}|2\d{9}|3\d{9}|7\d{9}|8\d{8,9}|9\d{9})$/.test(national)
+        ? '' : 'Enter a valid UK phone number.';
+    }],
+    [form.elements.postcode, value => value ? '' : 'Enter your postcode or location.'],
+    [form.elements.service, value => value ? '' : 'Choose a tyre service.']
+  ];
 
-  const clearErrors = () => {
-    locationError.textContent = '';
-    serviceError.textContent = '';
-    postcode.removeAttribute('aria-invalid');
-    service.removeAttribute('aria-invalid');
-  };
-  postcode.addEventListener('input', () => { locationError.textContent = ''; postcode.removeAttribute('aria-invalid'); });
-  service.addEventListener('change', () => { serviceError.textContent = ''; service.removeAttribute('aria-invalid'); });
+  function validate(field, rule) {
+    const message = rule(field.value.trim());
+    document.getElementById(field.id + '-error').textContent = message;
+    if (message) field.setAttribute('aria-invalid', 'true');
+    else field.removeAttribute('aria-invalid');
+    return !message;
+  }
 
-  form.addEventListener('submit', (event) => {
+  for (const [field, rule] of fields) {
+    field.addEventListener('input', () => {
+      if (field.hasAttribute('aria-invalid')) validate(field, rule);
+      status.textContent = '';
+      delete status.dataset.state;
+    });
+  }
+
+  form.addEventListener('submit', event => {
     event.preventDefault();
-    clearErrors();
-    const place = postcode.value.trim();
-    const requestedService = service.value.trim();
-    if (!place) {
-      locationError.textContent = 'Please enter your postcode or location.';
-      postcode.setAttribute('aria-invalid', 'true');
-    }
-    if (!requestedService) {
-      serviceError.textContent = 'Please select a tyre service.';
-      service.setAttribute('aria-invalid', 'true');
-    }
-    if (!place || !requestedService) {
-      (!place ? postcode : service).focus();
+    const invalid = fields.filter(([field, rule]) => !validate(field, rule));
+    if (invalid.length) {
+      status.dataset.state = 'error';
+      status.textContent = 'Check the highlighted fields and try again.';
+      invalid[0][0].focus();
       return;
     }
-    const vehicle = document.getElementById('vehicle').value;
-    const tyreSize = document.getElementById('tyre-size').value.trim();
-    const lines = [
-      `Hi ${BUSINESS.name}, I'd like a mobile tyre quote.`,
+
+    const service = form.elements.service.value;
+    const message = [
+      "Hi Meli's Mobile Tyre Fitting, I'd like a quote.",
       '',
-      `My location: ${place}`,
-      `Service needed: ${requestedService}`,
-      ...(vehicle ? [`Vehicle: ${vehicle}`] : []),
-      ...(tyreSize ? [`Tyre size: ${tyreSize}`] : []),
-      '',
-      'Please confirm availability and the total cost. Thank you!'
-    ];
-    // A user gesture opens WhatsApp directly. No form data is stored on this site.
-    trackLead('quote_whatsapp_click', { service: requestedService });
-    const a = document.createElement('a');
-    a.href = whatsappUrl(lines.join('\n'));
-    a.target = '_blank';
-    a.rel = 'noopener noreferrer';
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
+      'Name: ' + form.elements.fullName.value.trim(),
+      'Phone: ' + form.elements.phone.value.trim(),
+      'Postcode or location: ' + form.elements.postcode.value.trim(),
+      'Service: ' + service,
+      'Vehicle: ' + (form.elements.vehicle.value || 'Not provided'),
+      'Tyre size: ' + (form.elements.tyreSize.value.trim() || 'Not provided')
+    ].join('\n');
+
+    const link = document.createElement('a');
+    const url = new URL(document.querySelector(whatsappLinks).href);
+    url.searchParams.set('text', message);
+    link.href = url.href;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    trackContact('form_submit', 'hero', service);
+    // Track the handoff without placing form details in the data layer.
+    link.addEventListener('click', () => trackContact('whatsapp_click', 'hero', service));
+    link.click();
+    status.dataset.state = 'success';
+    status.textContent = 'WhatsApp draft prepared. Tap Send in WhatsApp to request your quote.';
   });
+
+  form.querySelector('button[type="submit"]').disabled = false;
 }
 
-setupContactLinks();
 setupQuoteForm();
-const year = document.getElementById('year');
-if (year) year.textContent = String(new Date().getFullYear());
-
+applyClientData();
+document.getElementById('year').textContent = String(new Date().getFullYear());
 </script>
 </body>
 </html>
