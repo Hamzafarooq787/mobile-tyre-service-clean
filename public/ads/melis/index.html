@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5V3XFN2S');</script>
+<!-- End Google Tag Manager -->
   <script>
     // Fill in confirmed business details only. Empty values hide the optional content.
     const CLIENT_DATA = {
@@ -514,6 +521,10 @@ strong{font-weight:700}
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V3XFN2S"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <a class="skip-link" href="#main">Skip to main content</a>
   <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
     <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.7 19.7 0 0 1-8.6-3.1 19.2 19.2 0 0 1-5.9-5.9 19.7 19.7 0 0 1-3.1-8.7A2 2 0 0 1 4.2 2h3a2 2 0 0 1 2 1.7l.5 2.8a2 2 0 0 1-.6 1.8L7.3 10a16 16 0 0 0 6.7 6.7l1.7-1.8a2 2 0 0 1 1.8-.6l2.8.5a2 2 0 0 1 1.7 2Z"/></symbol>
@@ -945,7 +956,7 @@ function setupQuoteForm() {
     link.addEventListener('click', () => trackContact('whatsapp_click', 'hero', service));
     link.click();
     status.dataset.state = 'success';
-    status.textContent = 'WhatsApp draft prepared. Tap Send in WhatsApp to request your quote.';
+    status.textContent = 'Thank you — your quote request is ready. Tap Send in WhatsApp to finish.';
   });
 
   form.querySelector('button[type="submit"]').disabled = false;
